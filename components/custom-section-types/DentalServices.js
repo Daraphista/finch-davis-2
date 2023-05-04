@@ -24,7 +24,7 @@ export default function DentalServices({
   customContentCollection,
 }) {
   return (
-    <div className="">
+    <section className="">
       <div className="container max-w-screen-2xl py-12 md:py-16 lg:py-20">
         <div className="mx-auto max-w-2xl lg:mx-0">
           {title && (
@@ -95,6 +95,6 @@ export default function DentalServices({
           </div>
         )}
       </div>
-    </div>
+    </section>
   );
 }
