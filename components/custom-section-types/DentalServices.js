@@ -1,11 +1,13 @@
-export default function DentalServices() {
+export default function DentalServices({ title }) {
   return (
     <div class="">
       <div class="container max-w-screen-2xl py-12 md:py-16 lg:py-20">
         <div class="mx-auto max-w-2xl lg:mx-0">
-          <h1 class="font-heading text-3xl font-normal text-gray-900 md:text-4xl">
-            Our Dental Services
-          </h1>
+          {title && (
+            <h1 class="font-heading text-3xl font-normal text-gray-900 md:text-4xl">
+              {title}
+            </h1>
+          )}
           <p class="mt-6 text-lg leading-8 text-gray-600">
             Lorem ipsum dolor sit amet consect adipisicing elit. Possimus magnam
             voluptatum cupiditate veritatis in accusamus quisquam.
