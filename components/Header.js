@@ -190,9 +190,7 @@ const NavLinks = ({ navigationLinks, isScrolling }) => {
             <Link
               href={`/${navLink?.fields?.slug}`}
               key={navLink?.fields?.title}
-              className={`block font-medium uppercase tracking-wider text-primary-100 hover:text-white hover:underline ${
-                isScrolling && "text-black hover:text-gray-600"
-              }`}
+              className={`block text-base font-semibold uppercase tracking-wider text-primary-800 hover:text-black`}
             >
               {navLink?.fields?.title}
             </Link>
