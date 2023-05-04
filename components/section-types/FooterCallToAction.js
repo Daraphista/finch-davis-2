@@ -1,4 +1,20 @@
-export default function FooterCallToAction({ title, subtitle, buttons }) {
+import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
+import { BLOCKS } from "@contentful/rich-text-types";
+
+const options = {
+  renderNode: {
+    [BLOCKS.PARAGRAPH]: (node, children) => (
+      <p class="mt-6 text-lg leading-8 text-gray-600">{children}</p>
+    ),
+  },
+};
+
+export default function FooterCallToAction({
+  title,
+  subtitle,
+  unformattedBody,
+  buttons,
+}) {
   return (
     <div class="relative isolate border-t border-primary-200 bg-white">
       <div class="mx-auto grid max-w-7xl grid-cols-1 lg:grid-cols-2">
@@ -15,10 +31,7 @@ export default function FooterCallToAction({ title, subtitle, buttons }) {
                 {subtitle}
               </h2>
             )}
-            <p class="mt-6 text-lg leading-8 text-gray-600">
-              Please complete our contact form and one of our patient
-              coordinators will get back to you in a jiffy.
-            </p>
+            {documentToReactComponents(unformattedBody, options)}
             <dl class="mt-10 space-y-4 text-base leading-7 text-gray-600">
               <div class="flex gap-x-4">
                 <dt class="flex-none">
