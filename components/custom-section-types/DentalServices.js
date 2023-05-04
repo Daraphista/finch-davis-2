@@ -1,4 +1,15 @@
-export default function DentalServices({ title }) {
+import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
+import { BLOCKS } from "@contentful/rich-text-types";
+
+const options = {
+  renderNode: {
+    [BLOCKS.PARAGRAPH]: (node, children) => (
+      <p class="mt-6 text-lg leading-8 text-gray-600">{children}</p>
+    ),
+  },
+};
+
+export default function DentalServices({ title, unformattedBody }) {
   return (
     <div class="">
       <div class="container max-w-screen-2xl py-12 md:py-16 lg:py-20">
@@ -8,10 +19,8 @@ export default function DentalServices({ title }) {
               {title}
             </h1>
           )}
-          <p class="mt-6 text-lg leading-8 text-gray-600">
-            Lorem ipsum dolor sit amet consect adipisicing elit. Possimus magnam
-            voluptatum cupiditate veritatis in accusamus quisquam.
-          </p>
+
+          {documentToReactComponents(unformattedBody, options)}
         </div>
         <div class="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-none">
           <dl class="grid max-w-xl grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none lg:grid-cols-3">
