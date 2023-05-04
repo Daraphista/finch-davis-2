@@ -151,7 +151,7 @@ export default function Header({ data, metaData }) {
   );
 }
 
-const Logo = ({ data, metaData, isScrolling }) => {
+const Logo = ({ data, metaData }) => {
   return (
     data && (
       <div className="flex flex-1 justify-start">
@@ -159,19 +159,7 @@ const Logo = ({ data, metaData, isScrolling }) => {
           <span className="sr-only">{metaData?.organizationName}</span>
           {/* Site Logo */}
           <div>
-            {data?.siteLogoWhite && !isScrolling && (
-              <Image
-                className="h-6 w-auto drop-shadow-md lg:h-10 "
-                src={`https:${data?.siteLogoWhite?.fields?.file?.url}`}
-                height={
-                  data?.siteLogoWhite?.fields?.file?.details?.image?.height
-                }
-                width={data?.siteLogoWhite?.fields?.file?.details?.image?.width}
-                alt={metaData?.organizationName}
-                objectfit="cover"
-              />
-            )}
-            {data?.siteLogo && isScrolling && (
+            {data?.siteLogo && (
               <Image
                 className="h-6 w-auto drop-shadow-md lg:h-10 "
                 src={`https:${data?.siteLogo?.fields?.file?.url}`}
