@@ -1,4 +1,4 @@
-export default function WhyChooseUs() {
+export default function WhyChooseUs({ title }) {
   return (
     <section class="overflow-hidden">
       <div class="container max-w-screen-2xl py-12 md:py-16 lg:py-20">
@@ -6,9 +6,11 @@ export default function WhyChooseUs() {
           <div class="px-6 md:px-0 lg:pr-4">
             <div class="mx-auto max-w-2xl lg:mx-0">
               <div>
-                <h1 class="text-base font-semibold uppercase tracking-wide text-primary-600 md:text-lg">
-                  Why Choose Us?
-                </h1>
+                {title && (
+                  <h1 class="text-base font-semibold uppercase tracking-wide text-primary-600 md:text-lg">
+                    {title}
+                  </h1>
+                )}
                 <h2 class="mt-1 font-heading text-2xl font-normal text-gray-900 md:text-3xl xl:text-4xl">
                   Treating dental patients in Baton Rouge since 1984
                 </h2>
