@@ -43,7 +43,7 @@ export default function Header({ data, metaData }) {
         <div className="flex items-center justify-between py-6 lg:justify-start lg:space-x-10">
           <Logo data={data} metaData={metaData} isScrolling={isScrolling} />
 
-          <div className="flex items-center justify-end">
+          <div className="flex items-end justify-end xl:flex-col">
             {/* Nav links */}
             <NavLinks
               navigationLinks={data?.navigationLinks}
