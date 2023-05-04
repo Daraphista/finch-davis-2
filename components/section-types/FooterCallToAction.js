@@ -5,12 +5,16 @@ export default function FooterCallToAction({ title, subtitle, buttons }) {
         <div class="relative px-6 pb-20 pt-24 sm:pt-32 lg:static lg:px-8 lg:py-48">
           <div class="mx-auto max-w-xl lg:mx-0 lg:max-w-lg">
             <div class="absolute inset-y-0 left-0 -z-10 w-full overflow-hidden bg-primary-50 ring-1 ring-primary-900/10 lg:w-1/2"></div>
-            {title && <h1 class="text-base font-semibold uppercase tracking-wide text-primary-600 md:text-lg">
-              {title}
-            </h1>}
-            <h2 class="mt-1 font-heading text-2xl font-normal text-gray-900 md:text-3xl xl:text-4xl">
-              Conact our dental office today!
-            </h2>
+            {title && (
+              <h1 class="text-base font-semibold uppercase tracking-wide text-primary-600 md:text-lg">
+                {title}
+              </h1>
+            )}
+            {subtitle && (
+              <h2 class="mt-1 font-heading text-2xl font-normal text-gray-900 md:text-3xl xl:text-4xl">
+                {subtitle}
+              </h2>
+            )}
             <p class="mt-6 text-lg leading-8 text-gray-600">
               Please complete our contact form and one of our patient
               coordinators will get back to you in a jiffy.
