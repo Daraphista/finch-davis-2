@@ -1,5 +1,6 @@
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
 import { BLOCKS } from "@contentful/rich-text-types";
+import uniqid from "uniqid";
 
 const options = {
   renderNode: {
@@ -35,7 +36,10 @@ export default function FooterCallToAction({
             {customContentCollection && (
               <dl className="mt-10 space-y-4 text-base leading-7 text-gray-600">
                 {customContentCollection?.map((customContentItem) => (
-                  <div className="flex gap-x-4">
+                  <div
+                    className="flex gap-x-4"
+                    key={`${customContentItem?.sys?.id}${uniqid()}`}
+                  >
                     <dt className="flex-none">
                       <span className="sr-only">
                         {customContentItem?.fields?.title}
