@@ -214,10 +214,10 @@ const CallToActionButtons = ({ callToAction, isScrolling }) => {
               <Link
                 href={`/${callToActionButton?.fields?.page?.fields?.slug}`}
                 key={callToActionButton?.fields?.text}
-                className={`button font-sans uppercase tracking-wider ${
+                className={`button button-sm inline-flex bg-primary-600 text-white  ${
                   isScrolling
-                    ? "border-primary-700 text-primary-700 hover:bg-primary-700 hover:text-white focus:ring-white"
-                    : "button button inline-flex bg-primary-600 text-white hover:bg-primary-700 hover:text-white focus:ring-primary-700"
+                    ? "hover:bg-primary-500 hover:text-white focus:ring-primary-700"
+                    : "hover:bg-primary-500 hover:text-white focus:ring-primary-700"
                 }`}
               >
                 {callToActionButton?.fields?.text}
