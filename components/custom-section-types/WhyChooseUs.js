@@ -8,34 +8,34 @@ export default function WhyChooseUs({
   buttons,
 }) {
   return (
-    <section class="overflow-hidden">
-      <div class="container max-w-screen-2xl py-12 md:py-16 lg:py-20">
-        <div class="grid grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:grid-cols-2 lg:items-center 2xl:border 2xl:p-12">
-          <div class="px-6 md:px-0 lg:pr-4">
-            <div class="mx-auto max-w-2xl lg:mx-0">
+    <section className="overflow-hidden">
+      <div className="container max-w-screen-2xl py-12 md:py-16 lg:py-20">
+        <div className="grid grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:grid-cols-2 lg:items-center 2xl:border 2xl:p-12">
+          <div className="px-6 md:px-0 lg:pr-4">
+            <div className="mx-auto max-w-2xl lg:mx-0">
               <div>
                 {title && (
-                  <h1 class="text-base font-semibold uppercase tracking-wide text-primary-600 md:text-lg">
+                  <h1 className="text-base font-semibold uppercase tracking-wide text-primary-600 md:text-lg">
                     {title}
                   </h1>
                 )}
                 {subtitle && (
-                  <h2 class="mt-1 font-heading text-2xl font-normal text-gray-900 md:text-3xl xl:text-4xl">
+                  <h2 className="mt-1 font-heading text-2xl font-normal text-gray-900 md:text-3xl xl:text-4xl">
                     {subtitle}
                   </h2>
                 )}
                 {body && (
-                  <div class="prose mt-4 max-w-lg xl:prose-lg">{body}</div>
+                  <div className="prose mt-4 max-w-lg xl:prose-lg">{body}</div>
                 )}
               </div>
 
               {customContentCollection && (
-                <dl class="mt-10 max-w-xl space-y-8 text-base leading-7 text-gray-600 lg:max-w-lg">
+                <dl className="mt-10 max-w-xl space-y-8 text-base leading-7 text-gray-600 lg:max-w-lg">
                   {customContentCollection?.map((customContentItem) => (
-                    <div class="relative pl-9">
-                      <dt class="inline font-semibold text-gray-900">
+                    <div className="relative pl-9">
+                      <dt className="inline font-semibold text-gray-900">
                         <svg
-                          class="absolute left-1 top-1 h-5 w-5 text-primary-600"
+                          className="absolute left-1 top-1 h-5 w-5 text-primary-600"
                           viewBox="0 0 20 20"
                           fill="currentColor"
                           aria-hidden="true"
@@ -49,7 +49,7 @@ export default function WhyChooseUs({
                         {customContentItem?.fields?.title}{" "}
                       </dt>
                       {customContentItem?.fields?.subtitle && (
-                        <dd class="inline">
+                        <dd className="inline">
                           {customContentItem?.fields?.subtitle}
                         </dd>
                       )}
@@ -86,10 +86,10 @@ export default function WhyChooseUs({
               )}
             </div>
           </div>
-          <div class="sm:px-6 lg:px-0">
-            <figure class="aspect-h-9 aspect-w-16 overflow-hidden rounded-sm lg:aspect-h-3 lg:aspect-w-4">
+          <div className="sm:px-6 lg:px-0">
+            <figure className="aspect-h-9 aspect-w-16 overflow-hidden rounded-sm lg:aspect-h-3 lg:aspect-w-4">
               <img
-                class="h-full w-full object-cover object-center"
+                className="h-full w-full object-cover object-center"
                 src="https://via.placeholder.com/1600x1200"
                 alt=""
               />
