@@ -207,9 +207,12 @@ const CallToActionButtons = ({ callToAction, isScrolling }) => {
   return (
     <div className="ml-auto mr-8 hidden flex-1 justify-end space-x-4 whitespace-nowrap md:flex xl:ml-8 xl:mr-0">
       {callToAction &&
-        callToAction?.map((callToActionButton) => {
+        callToAction?.map((callToActionButton, index) => {
           const contentType = callToActionButton?.sys?.contentType?.sys?.id;
-          if (contentType === "buttonLink") {
+          if (
+            contentType === "buttonLink" &&
+            index === callToAction.length - 1
+          ) {
             return (
               <Link
                 href={`/${callToActionButton?.fields?.page?.fields?.slug}`}
@@ -260,6 +263,15 @@ const CallToActionButtons = ({ callToAction, isScrolling }) => {
               </MyLink>
             );
           }
+          return (
+            <Link
+              href={`/${callToActionButton?.fields?.page?.fields?.slug}`}
+              key={callToActionButton?.fields?.text}
+              className={`font-semibold text-primary-900 hover:text-primary-600`}
+            >
+              {callToActionButton?.fields?.text}
+            </Link>
+          );
         })}
     </div>
   );
