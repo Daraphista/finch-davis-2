@@ -236,21 +236,27 @@ const CallToActionButtons = ({ callToAction, isScrolling }) => {
                 }}
                 key={callToActionButton?.fields?.number}
                 href={href}
-                className={`button inline-flex rounded-md border-2 border-transparent px-6 py-2 text-white shadow-none ${
-                  isScrolling && "lg:text-black"
-                }`}
+                className="group flex items-center space-x-2 text-lg text-primary-950"
               >
+                <span class="sr-only">Telephone</span>
                 {/* Telephone icon */}
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 512 512"
-                  height="16"
-                  width="16"
-                  className="mr-2 fill-primary-400"
-                >
-                  <path d="M347.1 24.6c7.7-18.6 28-28.5 47.4-23.2l88 24C499.9 30.2 512 46 512 64c0 247.4-200.6 448-448 448c-18 0-33.8-12.1-38.6-29.5l-24-88c-5.3-19.4 4.6-39.7 23.2-47.4l96-40c16.3-6.8 35.2-2.1 46.3 11.6L207.3 368c70.4-33.3 127.4-90.3 160.7-160.7L318.7 167c-13.7-11.2-18.4-30-11.6-46.3l40-96z" />
-                </svg>
-                {callToActionButton?.fields?.number}
+                <span class="stroke-current text-primary-500">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                    class="h-5 w-5"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M2 3.5A1.5 1.5 0 013.5 2h1.148a1.5 1.5 0 011.465 1.175l.716 3.223a1.5 1.5 0 01-1.052 1.767l-.933.267c-.41.117-.643.555-.48.95a11.542 11.542 0 006.254 6.254c.395.163.833-.07.95-.48l.267-.933a1.5 1.5 0 011.767-1.052l3.223.716A1.5 1.5 0 0118 15.352V16.5a1.5 1.5 0 01-1.5 1.5H15c-1.149 0-2.263-.15-3.326-.43A13.022 13.022 0 012.43 8.326 13.019 13.019 0 012 5V3.5z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                </span>
+                <span className="flex border border-primary-200 bg-white px-3 py-1 group-hover:border-primary-400">
+                  {callToActionButton?.fields?.number}
+                </span>
               </MyLink>
             );
           }
