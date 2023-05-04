@@ -1,4 +1,4 @@
-export default function WhyChooseUs({ title, subtitle }) {
+export default function WhyChooseUs({ title, subtitle, body }) {
   return (
     <section class="overflow-hidden">
       <div class="container max-w-screen-2xl py-12 md:py-16 lg:py-20">
@@ -16,12 +16,9 @@ export default function WhyChooseUs({ title, subtitle }) {
                     {subtitle}
                   </h2>
                 )}
-                <div class="prose mt-4 max-w-lg xl:prose-lg">
-                  <p>
-                    Drs. Robin Levy and Steven Vutera continue the history of
-                    offering premium dental care in Baton Rouge.
-                  </p>
-                </div>
+                {body && (
+                  <div class="prose mt-4 max-w-lg xl:prose-lg">{body}</div>
+                )}
               </div>
               <dl class="mt-10 max-w-xl space-y-8 text-base leading-7 text-gray-600 lg:max-w-lg">
                 <div class="relative pl-9">
