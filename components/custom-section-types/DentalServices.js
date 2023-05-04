@@ -71,7 +71,7 @@ export default function DentalServices({
               ))}
 
               <Link
-                class="flex flex-col border-2 border-primary-200 bg-primary-50 p-6 hover:border-primary-400"
+                class="group flex flex-col border-2 border-primary-200 bg-primary-50 p-6 hover:border-primary-400"
                 href="/"
               >
                 <dt class="text-2xl font-bold leading-7 text-gray-900">
@@ -83,10 +83,7 @@ export default function DentalServices({
                     today.
                   </p>
                   <div>
-                    <div
-                      href="#"
-                      class="button button-base flex bg-primary-600 text-white hover:bg-primary-500 hover:text-white focus:ring-primary-500"
-                    >
+                    <div class="button button-base flex bg-primary-600 text-white focus:ring-primary-500 group-hover:bg-primary-500 group-hover:text-white">
                       Contact Us
                     </div>
                   </div>
