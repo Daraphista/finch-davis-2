@@ -1,4 +1,4 @@
-export default function Testimonials() {
+export default function Testimonials({ title }) {
   return (
     <section class="relative isolate border-b border-primary-200/90">
       <div class="pattern-primary-light absolute inset-0 xl:bg-fixed"></div>
@@ -6,9 +6,11 @@ export default function Testimonials() {
       <div class="absolute inset-0 bg-gradient-to-b from-white via-primary-200 to-primary-50 opacity-90"></div>
       <div class="container relative z-1 max-w-screen-2xl py-12 md:py-16 lg:py-20">
         <div class="mx-auto max-w-3xl text-center">
-          <h1 class="text-base font-semibold uppercase tracking-wide text-primary-600 md:text-lg">
-            Patient Testimonials
-          </h1>
+          {title && (
+            <h1 class="text-base font-semibold uppercase tracking-wide text-primary-600 md:text-lg">
+              {title}
+            </h1>
+          )}
           <h2 class="mt-1 font-heading text-2xl font-normal text-gray-900 md:text-3xl xl:text-4xl">
             You can trust your smile with us
           </h2>
