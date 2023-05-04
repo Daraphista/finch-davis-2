@@ -1,8 +1,11 @@
+import Button from "../Button";
+
 export default function WhyChooseUs({
   title,
   subtitle,
   body,
   customContentCollection,
+  buttons,
 }) {
   return (
     <section class="overflow-hidden">
@@ -55,20 +58,32 @@ export default function WhyChooseUs({
                 </dl>
               )}
 
-              <div class="mt-8 flex space-x-3">
-                <a
-                  href="#"
-                  class="button inline-flex bg-primary-600 text-white hover:bg-primary-500 hover:text-white focus:ring-primary-500"
-                >
-                  Meet Our Team
-                </a>
-                <a
-                  href="#"
-                  class="button inline-flex border-primary-400 text-primary-700 hover:border-primary-600 hover:bg-primary-600 hover:text-white focus:ring-primary-500"
-                >
-                  Patient Info
-                </a>
-              </div>
+              {buttons && (
+                <div className="mt-8 flex space-x-3">
+                  {buttons?.map((button, index) => {
+                    if (index === 0) {
+                      return (
+                        <Button
+                          className="button inline-flex bg-primary-600 text-white hover:bg-primary-500 hover:text-white focus:ring-primary-500"
+                          text={button.fields.text}
+                          pageRef={button.fields.page}
+                          url={button.fields.url}
+                          key={button.fields.text}
+                        />
+                      );
+                    }
+                    return (
+                      <Button
+                        className="button inline-flex border-primary-400 text-primary-700 hover:border-primary-600 hover:bg-primary-600 hover:text-white focus:ring-primary-500"
+                        text={button.fields.text}
+                        pageRef={button.fields.page}
+                        url={button.fields.url}
+                        key={button.fields.text}
+                      />
+                    );
+                  })}
+                </div>
+              )}
             </div>
           </div>
           <div class="sm:px-6 lg:px-0">
