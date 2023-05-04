@@ -1,6 +1,7 @@
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
 import { BLOCKS } from "@contentful/rich-text-types";
 import Link from "next/link";
+import uniqid from "uniqid";
 
 const options = {
   renderNode: {
@@ -39,7 +40,10 @@ export default function DentalServices({
           <div className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-none">
             <dl className="grid max-w-xl grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none lg:grid-cols-3">
               {customContentCollection?.map((dentalService) => (
-                <div className="flex flex-col">
+                <div
+                  className="flex flex-col"
+                  key={`${dentalService?.sys?.id}${uniqid()}`}
+                >
                   <dt className="text-lg font-semibold leading-7 text-gray-900">
                     <div className="relative mb-6 flex h-10 w-10 items-center justify-center rounded-sm bg-primary-600">
                       {dentalService?.fields?.iconSvg && (
