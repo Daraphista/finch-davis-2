@@ -1,5 +1,6 @@
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
 import { BLOCKS } from "@contentful/rich-text-types";
+import Link from "next/link";
 
 const options = {
   renderNode: {
@@ -58,20 +59,20 @@ export default function DentalServices({
                     )}
 
                     <p class="mt-6">
-                      <a
-                        href="#"
+                      <Link
+                        href="/"
                         class="text-base font-semibold leading-6 text-primary-600 hover:text-primary-900"
                       >
                         Learn more <span aria-hidden="true">→</span>
-                      </a>
+                      </Link>
                     </p>
                   </dd>
                 </div>
               ))}
 
-              <a
+              <Link
                 class="flex flex-col border-2 border-primary-200 bg-primary-50 p-6 hover:border-primary-400"
-                href="#"
+                href="/"
               >
                 <dt class="text-2xl font-bold leading-7 text-gray-900">
                   Request Appointment
@@ -90,7 +91,7 @@ export default function DentalServices({
                     </div>
                   </div>
                 </dd>
-              </a>
+              </Link>
             </dl>
           </div>
         )}
