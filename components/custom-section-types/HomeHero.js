@@ -1,3 +1,5 @@
+import Button from "../Button";
+
 export default function HomeHero({ title, subtitle, buttons, media }) {
   return (
     <section class="relative overflow-hidden bg-primary-400">
@@ -21,14 +23,19 @@ export default function HomeHero({ title, subtitle, buttons, media }) {
               </h2>
             )}
 
-            <div class="mt-8">
-              <a
-                href="#"
-                class="button button-lg md:button-xl inline-flex bg-primary-600 text-white hover:bg-primary-500 focus:ring-primary-500"
-              >
-                Request Appointment
-              </a>
-            </div>
+            {buttons && (
+              <div class="mt-8">
+                {buttons?.map((button) => (
+                  <Button
+                    class="button button-lg md:button-xl inline-flex bg-primary-600 text-white hover:bg-primary-500 focus:ring-primary-500"
+                    text={button.fields.text}
+                    pageRef={button.fields.page}
+                    url={button.fields.url}
+                    key={button.fields.text}
+                  />
+                ))}
+              </div>
+            )}
           </div>
           <div>
             <figure class="aspect-h-9 aspect-w-16 overflow-hidden rounded-sm">
