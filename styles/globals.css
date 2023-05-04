@@ -1,8 +1,62 @@
 /* This is just placeholder code. Paste in the css code from the tailwind play mockup provided */
+/* import fonts */
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Unbounded:wght@300;400;500;600;700;800&display=swap");
+/* @import url('https://fonts.googleapis.com/css2?family=Literata:ital,opsz,wght@0,7..72,200;0,7..72,300;0,7..72,400;0,7..72,500;0,7..72,600;0,7..72,700;0,7..72,800;0,7..72,900;1,7..72,200;1,7..72,300;1,7..72,400;1,7..72,500;1,7..72,600;1,7..72,700;1,7..72,800;1,7..72,900&display=swap'); */
 
 @tailwind base;
 @tailwind components;
+
+/*
+shared button styles
+
+here in the CSS you define the padding, rounded corners, borders, casing, tracking etc.
+
+the actual bg color,text color and hover colors are defined within the classes of the actual HTML elements
+ */
+
+@layer components {
+  .button {
+    @apply cursor-pointer items-center justify-center rounded-sm border-2 border-transparent px-6 py-2 text-base font-semibold tracking-wider shadow-sm transition-colors duration-150 focus:outline-none focus:ring-2 focus:ring-offset-2;
+  }
+  /*
+define different button sizes
+button-sm, button-lg, button-xl etc.
+
+you can change the size of the button per breakpoint
+class="button button-sm md:button-base xl:button-xl"
+*/
+  .button-base {
+    @apply text-base;
+  }
+
+  .button-xs {
+    @apply px-3 py-1 text-xs;
+  }
+
+  .button-sm {
+    @apply px-4 py-1.5 text-sm;
+  }
+
+  .button-lg {
+    @apply px-6 py-2 text-lg;
+  }
+
+  .button-xl {
+    @apply px-7 py-2.5 text-xl;
+  }
+
+  .button-2xl {
+    @apply px-8 py-2.5 text-2xl;
+  }
+}
+
 @tailwind utilities;
+
+.pattern-primary-light {
+  background-size: 3.5rem;
+  background-image: url("data:image/svg+xml,%0A%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 202' fill='%230891b2' fill-opacity='0.5'%3E%3Cpath d='m140,187c5.63,5.63,9.55,9.55,10,10,1.57-1.57,47.53-47.53,50-50v-20c-1.04,1.04-58.94,58.94-60,60Z'/%3E%3Cpath d='m165,202h10c-1.76-1.76-3.44-3.44-5-5-1.71,1.71-3.39,3.39-5,5Z'/%3E%3Cpath d='m60,187L0,127v20l50,50c5.49-5.49,9.45-9.45,10-10Z'/%3E%3Cpath d='m25,202h10c-1.61-1.61-3.29-3.29-5-5-1.56,1.56-3.24,3.24-5,5Z'/%3E%3Cpath d='m160,5c6.87,6.87,14.26,14.26,20,20,2.98-2.98,6.42-6.42,10-10-5-5-10.28-10.28-15-15h-10c-1.76,1.76-3.44,3.44-5,5Z'/%3E%3Cpath d='m190,35c.45.45,4.37,4.37,10,10v-20c-5.6,5.6-9.61,9.61-10,10Z'/%3E%3Cpath d='m170,75c6.44-6.44,13.56-13.56,20-20-3.7-3.7-7.1-7.1-10-10-6.11,6.11-13.89,13.89-20,20,3.7,3.7,7.1,7.1,10,10Z'/%3E%3Cpath d='m100,46l50,50c5.49-5.49,9.45-9.45,10-10l-60-60c-1.04,1.04-58.94,58.94-60,60,5.63,5.63,9.55,9.55,10,10,1.57-1.57,47.53-47.53,50-50Z'/%3E%3Cpath d='m70,96c-3.58,3.58-7.02,7.02-10,10,6.87,6.87,14.26,14.26,20,20,2.98-2.98,6.42-6.42,10-10-6.87-6.87-14.27-14.27-20-20Z'/%3E%3Cpath d='m120,146c-2.9,2.9-6.3,6.3-10,10,6.44,6.44,13.56,13.56,20,20,2.9-2.9,6.3-6.3,10-10-6.11-6.11-13.89-13.89-20-20Z'/%3E%3Cpath d='m100,126c-5.6,5.6-9.61,9.61-10,10,.45.45,4.37,4.37,10,10,5.63-5.63,9.55-9.55,10-10-.39-.39-4.4-4.4-10-10Z'/%3E%3Cpath d='m80,146c-6.11,6.11-13.89,13.89-20,20,3.7,3.7,7.1,7.1,10,10,6.44-6.44,13.56-13.56,20-20-3.7-3.7-7.1-7.1-10-10Z'/%3E%3Cpath d='m110,116c3.58,3.58,7.02,7.02,10,10,5.74-5.74,13.13-13.13,20-20-2.98-2.98-6.42-6.42-10-10-5.73,5.73-13.13,13.13-20,20Z'/%3E%3Cpath d='m20,45c-2.9,2.9-6.3,6.3-10,10,6.44,6.44,13.56,13.56,20,20,2.9-2.9,6.3-6.3,10-10-6.11-6.11-13.89-13.89-20-20Z'/%3E%3Cpath d='m10,35c-.39-.39-4.4-4.4-10-10v20c5.63-5.63,9.55-9.55,10-10Z'/%3E%3Cpath d='m10,15c3.58,3.58,7.02,7.02,10,10,5.74-5.74,13.13-13.13,20-20-1.56-1.56-3.24-3.24-5-5h-10c-4.72,4.72-10,10-15,15Z'/%3E%3C/svg%3E");
+}
 
 /* So that the footer sticks to the bottom when page is shorter than screen */
 #__next {
