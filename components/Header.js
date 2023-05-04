@@ -44,15 +44,15 @@ export default function Header({ data, metaData }) {
           <Logo data={data} metaData={metaData} isScrolling={isScrolling} />
 
           <div className="flex items-end justify-end xl:flex-col">
-            {/* Nav links */}
-            <NavLinks
-              navigationLinks={data?.navigationLinks}
-              isScrolling={isScrolling}
-            />
-
             {/* Call to Action Buttons */}
             <CallToActionButtons
               callToAction={data?.callToAction}
+              isScrolling={isScrolling}
+            />
+
+            {/* Nav links */}
+            <NavLinks
+              navigationLinks={data?.navigationLinks}
               isScrolling={isScrolling}
             />
 
