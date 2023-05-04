@@ -1,4 +1,4 @@
-export default function Testimonials({ title }) {
+export default function Testimonials({ title, subtitle }) {
   return (
     <section class="relative isolate border-b border-primary-200/90">
       <div class="pattern-primary-light absolute inset-0 xl:bg-fixed"></div>
@@ -11,9 +11,11 @@ export default function Testimonials({ title }) {
               {title}
             </h1>
           )}
-          <h2 class="mt-1 font-heading text-2xl font-normal text-gray-900 md:text-3xl xl:text-4xl">
-            You can trust your smile with us
-          </h2>
+          {subtitle && (
+            <h2 class="mt-1 font-heading text-2xl font-normal text-gray-900 md:text-3xl xl:text-4xl">
+              {subtitle}
+            </h2>
+          )}
         </div>
         <div class="mx-auto mt-12 grid max-w-2xl grid-cols-1 grid-rows-1 gap-4 text-sm leading-6 text-gray-900 sm:mt-14 sm:grid-cols-2 xl:mx-0 xl:max-w-none xl:grid-flow-col xl:grid-cols-4">
           <figure class="col-span-2 hidden sm:block sm:bg-white sm:shadow-lg sm:ring-1 sm:ring-primary-900/10 xl:col-start-2 xl:row-end-1">
