@@ -205,7 +205,7 @@ const NavLinks = ({ navigationLinks, isScrolling }) => {
 
 const CallToActionButtons = ({ callToAction, isScrolling }) => {
   return (
-    <div className="ml-auto mr-8 hidden flex-1 justify-end space-x-4 whitespace-nowrap md:flex xl:ml-8 xl:mr-0">
+    <div className="ml-auto mr-8 hidden flex-1 items-center justify-end space-x-4 whitespace-nowrap md:flex xl:ml-8 xl:mr-0">
       {callToAction &&
         callToAction?.map((callToActionButton, index) => {
           const contentType = callToActionButton?.sys?.contentType?.sys?.id;
