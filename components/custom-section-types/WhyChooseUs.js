@@ -1,4 +1,5 @@
 import Button from "../Button";
+import uniqid from "uniqid";
 
 export default function WhyChooseUs({
   title,
@@ -32,7 +33,10 @@ export default function WhyChooseUs({
               {customContentCollection && (
                 <dl className="mt-10 max-w-xl space-y-8 text-base leading-7 text-gray-600 lg:max-w-lg">
                   {customContentCollection?.map((customContentItem) => (
-                    <div className="relative pl-9">
+                    <div
+                      className="relative pl-9"
+                      key={`${customContentItem?.sys?.id}${uniqid()}`}
+                    >
                       <dt className="inline font-semibold text-gray-900">
                         <svg
                           className="absolute left-1 top-1 h-5 w-5 text-primary-600"
