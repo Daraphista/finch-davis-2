@@ -178,7 +178,7 @@ const Logo = ({ data, metaData }) => {
 const NavLinks = ({ navigationLinks, isScrolling }) => {
   return (
     navigationLinks && (
-      <nav className="mt-2 hidden space-x-8 xl:flex">
+      <nav className="mt-5 hidden space-x-8 xl:flex">
         {navigationLinks?.map((navLink) => {
           return navLink?.fields?.childPages ? (
             <NestedLink
