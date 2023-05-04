@@ -14,7 +14,6 @@ export default function FooterCallToAction({
   subtitle,
   unformattedBody,
   customContentCollection,
-  buttons,
 }) {
   return (
     <div class="relative isolate border-t border-primary-200 bg-white">
