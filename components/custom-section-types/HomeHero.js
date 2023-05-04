@@ -10,12 +10,16 @@ export default function HomeHero({ title, subtitle, buttons, media }) {
       <div class="container relative z-10 max-w-screen-2xl py-12 md:py-16 lg:py-20 xl:py-28 2xl:pt-32">
         <div class="grid items-center gap-8 lg:grid-cols-2 lg:gap-16">
           <div class="">
-            <h1 class="text-lg font-semibold uppercase tracking-wide text-primary-600 md:text-xl xl:text-2xl">
-              Comprehensive Dental Care
-            </h1>
-            <h2 class="mt-3 font-heading text-4xl font-normal text-primary-950 md:text-5xl xl:text-6xl">
-              Commitment to Excellent Dentistry
-            </h2>
+            {title && (
+              <h1 class="text-lg font-semibold uppercase tracking-wide text-primary-600 md:text-xl xl:text-2xl">
+                {title}
+              </h1>
+            )}
+            {subtitle && (
+              <h2 class="mt-3 font-heading text-4xl font-normal text-primary-950 md:text-5xl xl:text-6xl">
+                {subtitle}
+              </h2>
+            )}
 
             <div class="mt-8">
               <a
