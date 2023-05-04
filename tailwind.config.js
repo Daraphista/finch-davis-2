@@ -11,20 +11,33 @@ module.exports = {
   theme: {
     // font families are defined here in the config
     // fonts need to be imported in the CSS tab
+    fontFamily: {
+      // default/main body font
+      sans: ["Nunito Sans", "sans-serif"],
+      // heading font for hero titles, section titles, and RTE (Rich Text Editor) elements
+      heading: ["Unbounded", "sans-serif"],
+    },
     extend: {
-      fontFamily: {
-        // default/main body font
-        sans: ["Inter", "sans-serif"],
-        // heading font for hero titles, section titles, and RTE (Rich Text Editor) elements
-        heading: ['"Work Sans"', "serif"],
-      },
       colors: {
         transparent: "transparent",
         current: "currentColor",
         white: colors.white,
         black: colors.black,
-        gray: colors.neutral,
-        primary: colors.red,
+        gray: colors.slate,
+        primary: colors.cyan,
+        // secondary: {
+        //   DEFAULT: '#151427',
+        //   50: '#F4F3F9',
+        //   100: '#E4E3F0',
+        //   200: '#C4C1DF',
+        //   300: '#A39FCE',
+        //   400: '#827DBD',
+        //   500: '#625CAB',
+        //   600: '#4C488C',
+        //   700: '#3A376A',
+        //   800: '#272549',
+        //   900: '#151427',
+        // },
       },
       container: {
         center: true,
@@ -126,20 +139,20 @@ module.exports = {
             },
             "--tw-prose-body": theme("colors.primary[100]"),
             "--tw-prose-headings": theme("colors.white"),
-            "--tw-prose-lead": theme("colors.primary[200]"),
+            "--tw-prose-lead": theme("colors.primary[300]"),
             "--tw-prose-links": theme("colors.white"),
             "--tw-prose-bold": theme("colors.white"),
-            "--tw-prose-counters": theme("colors.primary[300]"),
-            "--tw-prose-bullets": theme("colors.primary[400]"),
-            "--tw-prose-hr": theme("colors.primary[500]"),
+            "--tw-prose-counters": theme("colors.primary[400]"),
+            "--tw-prose-bullets": theme("colors.primary[500]"),
+            "--tw-prose-hr": theme("colors.primary[600]"),
             "--tw-prose-quotes": theme("colors.primary[100]"),
-            "--tw-prose-quote-borders": theme("colors.primary[500]"),
+            "--tw-prose-quote-borders": theme("colors.primary[600]"),
             "--tw-prose-captions": theme("colors.primary[400]"),
             "--tw-prose-code": theme("colors.white"),
             "--tw-prose-pre-code": theme("colors.primary[300]"),
             "--tw-prose-pre-bg": "rgb(0 0 0 / 50%)",
-            "--tw-prose-th-borders": theme("colors.primary[400]"),
-            "--tw-prose-td-borders": theme("colors.primary[500]"),
+            "--tw-prose-th-borders": theme("colors.primary[500]"),
+            "--tw-prose-td-borders": theme("colors.primary[600]"),
           },
         },
         secondary: {
