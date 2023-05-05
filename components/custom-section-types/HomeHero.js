@@ -53,7 +53,7 @@ export default function HomeHero({ title, subtitle, buttons, media }) {
           className="absolute bottom-0 right-0 h-[70%] w-[70%] fill-current text-primary-500"
           viewBox="0 0 1000 1000"
           preserveAspectRatio="none"
-          fill-opacity="0.15"
+          fillOpacity="0.15"
         >
           <path d="M 0 1000 Q 250 250 1000 0 L 1000 1000 Z" />
         </svg>
@@ -61,7 +61,7 @@ export default function HomeHero({ title, subtitle, buttons, media }) {
           className="absolute bottom-0 right-0 h-3/5 w-3/5 fill-current text-primary-500"
           viewBox="0 0 1000 1000"
           preserveAspectRatio="none"
-          fill-opacity="0.25"
+          fillOpacity="0.25"
         >
           <path d="M 0 1000 Q 250 250 1000 0 L 1000 1000 Z" />
         </svg>
@@ -69,7 +69,7 @@ export default function HomeHero({ title, subtitle, buttons, media }) {
           className="absolute bottom-0 right-0 h-1/2 w-1/2 fill-current text-primary-500"
           viewBox="0 0 1000 1000"
           preserveAspectRatio="none"
-          fill-opacity="0.4"
+          fillOpacity="0.4"
         >
           <path d="M 0 1000 Q 250 250 1000 0 L 1000 1000 Z" />
         </svg>
