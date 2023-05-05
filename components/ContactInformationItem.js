@@ -4,10 +4,10 @@ import Link from "next/link";
 
 export default function ContactInformationItem({ title, body }) {
   return (
-    <div className="flex flex-col text-gray-200">
-      <div className="mb-1 font-semibold uppercase tracking-wide text-white">
+    <div>
+      <p className="text-xl font-medium uppercase tracking-wide text-primary-400">
         {title}
-      </div>
+      </p>
       {documentToReactComponents(body, options)}
     </div>
   );
