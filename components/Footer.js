@@ -2,6 +2,7 @@ import { getFooterData, getMetaData } from "../lib/api";
 import Link from "next/link";
 import ContactInformationItem from "./ContactInformationItem";
 import Image from "next/legacy/image";
+import uniqid from "uniqid";
 
 export default async function Footer() {
   const data = await getFooterData();
@@ -43,7 +44,7 @@ const FooterNavigation = ({ footerNavigation }) => {
   return (
     footerNavigation && (
       <nav
-        className="flex flex-col flex-wrap justify-center lg:flex-row lg:justify-between"
+        className="space-y-2 lg:flex lg:justify-between lg:space-y-0"
         aria-label="Footer"
       >
         {footerNavigation?.map((footerNavItem) => {
@@ -73,17 +74,14 @@ const FooterNavigation = ({ footerNavigation }) => {
             );
           } else {
             return (
-              <div className="py-2" key={footerNavItem?.fields?.title}>
-                <div className="text-base font-semibold uppercase tracking-wide text-gray-200">
-                  <Link
-                    href={`${footerNavItem?.fields?.slug}`}
-                    target="_self"
-                    className="text-gray-200 hover:text-white"
-                  >
-                    {footerNavItem?.fields?.title}
-                  </Link>
-                </div>
-              </div>
+              <Link
+                href={`${footerNavItem?.fields?.slug}`}
+                target="_self"
+                className="block text-base font-medium tracking-wide text-gray-300 hover:text-white"
+                key={`${footerNavItem?.sys?.id}${uniqid()}`}
+              >
+                {footerNavItem?.fields?.title}
+              </Link>
             );
           }
         })}
