@@ -165,7 +165,7 @@ const Logo = ({ data, metaData }) => {
                 src={`https:${data?.siteLogo?.fields?.file?.url}`}
                 height={data?.siteLogo?.fields?.file?.details?.image?.height}
                 width={data?.siteLogo?.fields?.file?.details?.image?.width}
-                alt={metaData?.organizationName}
+                alt=""
               />
             )}
           </div>
