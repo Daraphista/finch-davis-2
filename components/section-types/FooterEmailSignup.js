@@ -34,7 +34,7 @@ export default function FooterEmailSignup({ title }) {
                 maxLength="255"
                 required=""
                 className="w-full rounded-sm border-gray-400 px-5 py-3 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-primary-700"
-                placeHolder="Enter your email"
+                placeholder="Enter your email"
               />
               <button
                 id="saveForm"
