@@ -13,9 +13,9 @@ module.exports = {
     // fonts need to be imported in the CSS tab
     fontFamily: {
       // default/main body font
-      sans: ["Nunito Sans", "sans-serif"],
+      sans: ["Plus Jakarta Sans", "sans-serif"],
       // heading font for hero titles, section titles, and RTE (Rich Text Editor) elements
-      heading: ["Unbounded", "sans-serif"],
+      heading: ["Hepta Slab", "sans-serif"],
     },
     extend: {
       colors: {
