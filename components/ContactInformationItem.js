@@ -8,7 +8,9 @@ export default function ContactInformationItem({ title, body }) {
       <p className="text-xl font-medium uppercase tracking-wide text-primary-400">
         {title}
       </p>
-      {documentToReactComponents(body, options)}
+      <div className="mt-3 text-lg text-gray-300">
+        {documentToReactComponents(body, options)}
+      </div>
     </div>
   );
 }
@@ -26,7 +28,7 @@ const options = {
       );
     },
     [BLOCKS.PARAGRAPH]: (node, children) => {
-      return <p className="mt-1 text-lg">{children}</p>;
+      return <p className="mt-1 text-lg group-hover:underline">{children}</p>;
     },
     [INLINES.HYPERLINK]: (node, children) => {
       return (
