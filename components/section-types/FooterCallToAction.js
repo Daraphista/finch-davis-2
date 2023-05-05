@@ -68,7 +68,7 @@ export default function FooterCallToAction({
             <div className="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
               <div>
                 <label
-                  for="first-name"
+                  htmlFor="first-name"
                   className="block text-sm font-semibold leading-6 text-gray-900"
                 >
                   First name
@@ -85,7 +85,7 @@ export default function FooterCallToAction({
               </div>
               <div>
                 <label
-                  for="last-name"
+                  htmlFor="last-name"
                   className="block text-sm font-semibold leading-6 text-gray-900"
                 >
                   Last name
@@ -102,7 +102,7 @@ export default function FooterCallToAction({
               </div>
               <div className="sm:col-span-2">
                 <label
-                  for="email"
+                  htmlFor="email"
                   className="block text-sm font-semibold leading-6 text-gray-900"
                 >
                   Email
@@ -119,7 +119,7 @@ export default function FooterCallToAction({
               </div>
               <div className="sm:col-span-2">
                 <label
-                  for="phone-number"
+                  htmlFor="phone-number"
                   className="block text-sm font-semibold leading-6 text-gray-900"
                 >
                   Phone number
@@ -136,7 +136,7 @@ export default function FooterCallToAction({
               </div>
               <div className="sm:col-span-2">
                 <label
-                  for="message"
+                  htmlFor="message"
                   className="block text-sm font-semibold leading-6 text-gray-900"
                 >
                   Message
