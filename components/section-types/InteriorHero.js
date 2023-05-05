@@ -32,7 +32,7 @@ export default function InteriorHero({ title }) {
             vectorEffect="non-scaling-stroke"
             fillOpacity="0"
             strokeWidth="4"
-            className="stroke-current text-primary-600"
+            className="strokeCurrent text-primary-600"
           />
         </svg>
       </div>
