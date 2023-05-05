@@ -92,7 +92,7 @@ export default function HomeHero({ title, subtitle, buttons, media }) {
             d="M 0 0 Q 500 100 1000 0"
             fill="none"
             strokeWidth="2"
-            vector-effect="non-scaling-stroke"
+            vectorEffect="non-scaling-stroke"
           />
         </svg>
       </div>
