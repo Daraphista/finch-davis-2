@@ -287,7 +287,7 @@ const MobileMenuLogo = ({ logo, metaData }) => {
               src={`https:${logo?.fields?.file?.url}`}
               height={logo?.fields?.file?.details?.image?.height}
               width={logo?.fields?.file?.details?.image?.width}
-              alt={logo?.fields?.title}
+              alt=""
             />
           </div>
         </span>
