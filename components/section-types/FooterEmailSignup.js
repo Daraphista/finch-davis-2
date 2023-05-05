@@ -16,25 +16,25 @@ export default function FooterEmailSignup({ title }) {
             <form
               name="form1294"
               class="wufoo sm:flex"
-              accept-charset="UTF-8"
-              autocomplete="off"
-              enctype="multipart/form-data"
+              acceptCharset="UTF-8"
+              autoComplete="off"
+              encType="multipart/form-data"
               method="post"
               action="https://modiphy.wufoo.com/forms/zzb9yb30rquiqj/#public"
             >
-              <label for="emailAddress" class="sr-only">
+              <label htmlFor="emailAddress" class="sr-only">
                 Email address
               </label>
               <input
                 id="Field6"
                 name="Field6"
-                spellcheck="false"
+                spellCheck="false"
                 type="email"
-                autocomplete="email"
-                maxlength="255"
+                autoComplete="email"
+                maxLength="255"
                 required=""
                 class="w-full rounded-sm border-gray-400 px-5 py-3 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-primary-700"
-                placeholder="Enter your email"
+                placeHolder="Enter your email"
               />
               <button
                 id="saveForm"
@@ -46,7 +46,7 @@ export default function FooterEmailSignup({ title }) {
               </button>
 
               <div class="hidden">
-                <label for="comment">Do Not Fill This Out</label>
+                <label htmlFor="comment">Do Not Fill This Out</label>
                 <textarea
                   name="comment"
                   id="comment"
