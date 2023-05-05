@@ -241,7 +241,7 @@ const CallToActionButtons = ({ callToAction, isScrolling }) => {
               >
                 <span className="sr-only">Telephone</span>
                 {/* Telephone icon */}
-                <span className="stroke-current text-primary-500">
+                <span className="strokeCurrent text-primary-500">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 20 20"
