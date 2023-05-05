@@ -84,14 +84,14 @@ export default function HomeHero({ title, subtitle, buttons, media }) {
           <path d="M 0 0 Q 500 100 1000 0 L 1000 100 L 0 100" />
         </svg>
         <svg
-          className="absolute bottom-0 left-0 right-0 stroke-current text-primary-200"
+          className="strokeCurrent absolute bottom-0 left-0 right-0 text-primary-200"
           viewBox="0 -10 1000 100"
           preserveAspectRatio="none"
         >
           <path
             d="M 0 0 Q 500 100 1000 0"
             fill="none"
-            stroke-width="2"
+            strokeWidth="2"
             vector-effect="non-scaling-stroke"
           />
         </svg>
