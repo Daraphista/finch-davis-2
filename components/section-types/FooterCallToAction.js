@@ -78,7 +78,7 @@ export default function FooterCallToAction({
                     type="text"
                     name="first-name"
                     id="first-name"
-                    autocomplete="given-name"
+                    autoComplete="given-name"
                     className="block w-full rounded-sm border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-primary-600 sm:text-sm sm:leading-6"
                   />
                 </div>
@@ -95,7 +95,7 @@ export default function FooterCallToAction({
                     type="text"
                     name="last-name"
                     id="last-name"
-                    autocomplete="family-name"
+                    autoComplete="family-name"
                     className="block w-full rounded-sm border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-primary-600 sm:text-sm sm:leading-6"
                   />
                 </div>
@@ -112,7 +112,7 @@ export default function FooterCallToAction({
                     type="email"
                     name="email"
                     id="email"
-                    autocomplete="email"
+                    autoComplete="email"
                     className="block w-full rounded-sm border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-primary-600 sm:text-sm sm:leading-6"
                   />
                 </div>
@@ -129,7 +129,7 @@ export default function FooterCallToAction({
                     type="tel"
                     name="phone-number"
                     id="phone-number"
-                    autocomplete="tel"
+                    autoComplete="tel"
                     className="block w-full rounded-sm border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-primary-600 sm:text-sm sm:leading-6"
                   />
                 </div>
