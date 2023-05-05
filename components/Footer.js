@@ -1,7 +1,7 @@
 import { getFooterData, getMetaData } from "../lib/api";
 import Link from "next/link";
 import ContactInformationItem from "./ContactInformationItem";
-import Image from "next/legacy/image";
+import Image from "next/image";
 import uniqid from "uniqid";
 
 export default async function Footer() {
@@ -93,16 +93,15 @@ const FooterNavigation = ({ footerNavigation }) => {
 const FooterLogo = ({ footerLogo, metaData }) => {
   return (
     footerLogo && (
-      <div className="text-center">
-        <Link href="/" className="inline-block">
-          <div>
-            <Image
-              src={`https:${footerLogo?.fields?.file?.url}`}
-              height={footerLogo?.fields?.file?.details?.image?.height}
-              width={footerLogo?.fields?.file?.details?.image?.width}
-              alt={`${metaData?.organizationName}`}
-            />
-          </div>
+      <div className="">
+        <Link href="/" className="mx-auto block w-fit">
+          <Image
+            className="h-16"
+            src={`https:${footerLogo?.fields?.file?.url}`}
+            height={footerLogo?.fields?.file?.details?.image?.height}
+            width={footerLogo?.fields?.file?.details?.image?.width}
+            alt={`${metaData?.organizationName}`}
+          />
         </Link>
       </div>
     )
