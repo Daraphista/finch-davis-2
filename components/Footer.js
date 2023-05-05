@@ -30,6 +30,7 @@ const FooterInformation = ({ footerInformation }) => {
           <ContactInformationItem
             title={footerInfoItem?.fields?.title}
             body={footerInfoItem?.fields?.body}
+            url={footerInfoItem?.fields?.url}
             key={footerInfoItem?.fields?.title}
           />
         ))}

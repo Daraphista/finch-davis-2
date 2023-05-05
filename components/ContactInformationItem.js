@@ -2,15 +2,24 @@ import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
 import { BLOCKS, INLINES } from "@contentful/rich-text-types";
 import Link from "next/link";
 
-export default function ContactInformationItem({ title, body }) {
+export default function ContactInformationItem({ title, body, url }) {
   return (
     <div>
       <p className="text-xl font-medium uppercase tracking-wide text-primary-400">
         {title}
       </p>
-      <div className="mt-3 text-lg text-gray-300">
-        {documentToReactComponents(body, options)}
-      </div>
+      {url ? (
+        <Link
+          href={url}
+          className="group mt-3 block cursor-pointer text-lg text-gray-300"
+        >
+          {documentToReactComponents(body, options)}
+        </Link>
+      ) : (
+        <div className="mt-3 text-lg text-gray-300">
+          {documentToReactComponents(body, options)}
+        </div>
+      )}
     </div>
   );
 }
