@@ -3,17 +3,17 @@ import Media from "../Media";
 
 export default function InteriorHero({ title }) {
   return (
-    <section className="relative bg-gray-600">
-      <div className="pattern-dark absolute inset-0"></div>
-      <div className="absolute inset-0 bg-gradient-to-br from-black"></div>
+    <section className="relative overflow-hidden bg-primary-400">
+      <div className="pattern-primary-light absolute inset-0 xl:bg-fixed"></div>
+      <div className="absolute inset-0 bg-gradient-to-br from-white from-30%"></div>
+
       <div className="md:h-22 h-20 lg:h-24 xl:h-28"></div>
 
       <div className="pointer-events-none absolute inset-0 overflow-hidden"></div>
-
       <div className="container relative z-10 mx-auto max-w-screen-2xl px-8 pb-16 pt-24 md:pb-24 md:pt-32 lg:pb-40">
         <div className="flex justify-center lg:mt-8">
           {title && (
-            <h1 className="max-w-xl text-center font-heading text-4xl font-extrabold uppercase tracking-wide text-white md:text-4xl lg:text-7xl">
+            <h1 className="mt-3 font-heading text-4xl font-normal text-primary-950 md:text-5xl xl:text-6xl">
               {title}
             </h1>
           )}
