@@ -97,6 +97,8 @@ export default function HeroContactForm({
               </div>
             )}
 
+            {customBody && <div>{customBody}</div>}
+
             {customContentCollection && (
               <div className="mt-8">
                 <div className="space-y-5 xl:flex xl:justify-between xl:space-y-0">
