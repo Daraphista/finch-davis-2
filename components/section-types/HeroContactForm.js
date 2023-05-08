@@ -6,6 +6,14 @@ import Link from "next/link";
 import { useEffect } from "react";
 import { content } from "@/tailwind.config";
 
+const options = {
+  renderNode: {
+    [BLOCKS.PARAGRAPH]: (node, children) => (
+      <p className="mt-6 text-lg leading-8 text-gray-600">{children}</p>
+    ),
+  },
+};
+
 export default function HeroContactForm({
   id,
   title,
@@ -14,51 +22,6 @@ export default function HeroContactForm({
   unformattedBody,
   customContentCollection,
 }) {
-  const options = {
-    renderNode: {
-      [BLOCKS.LIST_ITEM]: (node, children) => (
-        <div className="flex w-full bg-transparent">
-          <svg
-            className="mr-4 min-h-[20px] min-w-[25px] fill-primary-200"
-            aria-hidden="true"
-            focusable="false"
-            dataprefix="far"
-            dataicon="check"
-            role="img"
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 448 512"
-            weight={25}
-            height={20}
-          >
-            <path d="M440.1 103C450.3 112.4 450.3 127.6 440.1 136.1L176.1 400.1C167.6 410.3 152.4 410.3 143 400.1L7.029 264.1C-2.343 255.6-2.343 240.4 7.029 231C16.4 221.7 31.6 221.7 40.97 231L160 350.1L407 103C416.4 93.66 431.6 93.66 440.1 103V103z"></path>
-          </svg>
-
-          <div className="text-lg font-medium uppercase tracking-wide text-white md:text-xl lg:text-base xl:text-lg 2xl:text-xl">
-            {children}
-          </div>
-        </div>
-      ),
-      [BLOCKS.HEADING_3]: (node, children) => (
-        <h3 className="text-lg font-medium uppercase tracking-wide text-white md:text-xl lg:text-base xl:text-lg 2xl:text-xl">
-          {children}
-        </h3>
-      ),
-      [BLOCKS.UL_LIST]: (node, children) => (
-        <ul className="mx-auto mt-8 grid max-w-xl grid-cols-1 gap-x-3 gap-y-3 md:mt-10 lg:mx-0 lg:gap-y-2 xl:gap-y-4">
-          {children}
-        </ul>
-      ),
-      [INLINES.HYPERLINK]: (node, children) => (
-        <Link
-          href={node?.data?.uri}
-          className="text-2xl font-medium uppercase tracking-wide text-white md:text-xl lg:text-base xl:text-lg 2xl:text-xl"
-        >
-          {children}
-        </Link>
-      ),
-    },
-  };
-
   const emailEmbeds = customContentCollection.filter(
     (customContentItem) =>
       customContentItem?.sys?.contentType?.sys?.id === "contactFormEmbed"
