@@ -5,6 +5,7 @@ import Script from "next/script";
 import Link from "next/link";
 import { useEffect } from "react";
 import { content } from "@/tailwind.config";
+import uniqid from "uniqid";
 
 const options = {
   renderNode: {
@@ -63,34 +64,28 @@ export default function HeroContactForm({
             {customBody && <div>{customBody}</div>}
 
             {customContentCollection && (
-              <div className="mt-8">
-                <div className="space-y-5 xl:flex xl:justify-between xl:space-y-0">
-                  {customContentCollection?.map((customContentItem) => {
-                    // To shorten if statement
-                    const contentType =
-                      customContentItem?.sys?.contentType?.sys?.id;
-
-                    // To Reduce indentation in if statement
-                    const CustomContentComponent = (
-                      <div key={customContentItem?.sys?.id}>
-                        <p className="font-heading text-lg font-medium uppercase tracking-wide text-gray-100">
-                          {customContentItem?.fields?.title}
-                        </p>
-                        <div className="mt-3 text-lg text-gray-300">
-                          {documentToReactComponents(
-                            customContentItem?.fields?.body
-                          )}
-                        </div>
-                      </div>
-                    );
-
-                    // Render only entries with a certain content type
-                    if (contentType === "customContentItem") {
-                      return CustomContentComponent;
-                    }
-                  })}
-                </div>
-              </div>
+              <dl className="mt-10 space-y-4 text-base leading-7 text-gray-600">
+                {customContentCollection?.map((customContentItem) => (
+                  <div
+                    className="flex gap-x-4"
+                    key={`${customContentItem?.sys?.id}${uniqid()}`}
+                  >
+                    <dt className="flex-none">
+                      <span className="sr-only">
+                        {customContentItem?.fields?.title}
+                      </span>
+                      <div
+                        dangerouslySetInnerHTML={{
+                          __html: customContentItem?.fields?.iconSvg,
+                        }}
+                      />
+                    </dt>
+                    <dd className="max-w-[200px]">
+                      {customContentItem?.fields?.subtitle}
+                    </dd>
+                  </div>
+                ))}
+              </dl>
             )}
 
             {buttons && (
