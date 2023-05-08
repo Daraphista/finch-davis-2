@@ -92,7 +92,7 @@ export default function HeroContactForm({
             )}
 
             {subtitle && (
-              <div className="prose prose-lg prose-invert mt-6 md:prose-xl">
+              <div className="mt-1 font-heading text-2xl font-normal text-gray-900 md:text-3xl xl:text-4xl">
                 {subtitle}
               </div>
             )}
