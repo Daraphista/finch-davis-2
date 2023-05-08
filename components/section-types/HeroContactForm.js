@@ -75,14 +75,13 @@ export default function HeroContactForm({
   // render rich text from data
   const customBody = documentToReactComponents(unformattedBody, options);
   return (
-    <section id={id} className="relative bg-gray-600">
-      <div className="pattern-dark absolute inset-0"></div>
-      <div className="absolute inset-0 bg-gradient-to-br from-black"></div>
+    <section className="relative overflow-hidden bg-primary-400">
+      <div className="pattern-primary-light absolute inset-0 xl:bg-fixed"></div>
+      <div className="absolute inset-0 bg-gradient-to-br from-white from-30%"></div>
+
       <div className="md:h-22 h-20 lg:h-24 xl:h-28"></div>
 
       <div className="pointer-events-none absolute inset-0 overflow-hidden"></div>
-
-      <div className="relative"></div>
       <div className="container relative z-1 max-w-screen-2xl py-12 md:py-16 lg:py-20 xl:py-24 2xl:py-28">
         <div className="grid items-start gap-8 lg:grid-cols-12">
           <div className="lg:col-span-6 lg:mt-5">
