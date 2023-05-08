@@ -86,7 +86,7 @@ export default function HeroContactForm({
         <div className="grid items-start gap-8 lg:grid-cols-12">
           <div className="lg:col-span-6 lg:mt-5">
             {title && (
-              <h1 className="max-w-xl font-heading text-4xl font-extrabold uppercase text-white md:text-4xl lg:text-7xl">
+              <h1 className="text-base font-semibold uppercase tracking-wide text-primary-600 md:text-lg">
                 {title}
               </h1>
             )}
