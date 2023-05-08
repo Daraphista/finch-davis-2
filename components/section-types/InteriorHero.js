@@ -1,7 +1,7 @@
 import Button from "../Button";
 import Media from "../Media";
 
-export default function InteriorHero({ title }) {
+export default function InteriorHero({ title, subtitle }) {
   return (
     <section className="relative overflow-hidden bg-primary-400">
       <div className="pattern-primary-light absolute inset-0 xl:bg-fixed"></div>
@@ -15,6 +15,11 @@ export default function InteriorHero({ title }) {
           {title && (
             <h1 className="mt-3 font-heading text-4xl font-normal text-primary-950 md:text-5xl xl:text-6xl">
               {title}
+            </h1>
+          )}
+          {subtitle && (
+            <h1 className="mt-3 text-lg font-semibold uppercase tracking-wide text-primary-600 md:text-xl xl:text-2xl">
+              {subtitle}
             </h1>
           )}
         </div>
