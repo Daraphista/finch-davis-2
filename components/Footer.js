@@ -9,15 +9,16 @@ export default async function Footer() {
   const metaData = await getMetaData();
 
   return (
-    <footer className="mt-auto bg-gray-900 pb-24 pt-12">
-      <div className="container max-w-screen-lg space-y-14 text-center lg:text-left">
+    <footer className="bg-gray-900 pb-24 pt-12">
+      <div className="container max-w-screen-lg space-y-16 text-center lg:text-left">
         <FooterInformation footerInformation={data?.footerInformation} />
 
         <FooterNavigation footerNavigation={data?.footerNavigation} />
 
-        <FooterLogo footerLogo={data?.footerLogo} metaData={metaData} />
-
-        <ModiphyBannerFooter metaData={metaData} />
+        <div>
+          <FooterLogo footerLogo={data?.footerLogo} metaData={metaData} />
+          <ModiphyBannerFooter metaData={metaData} />
+        </div>
       </div>
     </footer>
   );
@@ -112,7 +113,7 @@ const ModiphyBannerFooter = ({ metaData }) => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <div className="space-y-6">
+    <div className="mt-5">
       <p className="flex items-center justify-center space-x-1 text-center text-sm text-gray-400">
         <span className="inline-block">
           ©{currentYear} {metaData?.organizationName} All rights reserved.
