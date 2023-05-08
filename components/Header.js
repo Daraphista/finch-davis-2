@@ -161,7 +161,7 @@ const Logo = ({ data, metaData }) => {
           <div>
             {data?.siteLogo && (
               <Image
-                className="h-6 w-auto drop-shadow-md lg:h-10 "
+                className="h-8 w-auto md:h-12 xl:h-16"
                 src={`https:${data?.siteLogo?.fields?.file?.url}`}
                 height={data?.siteLogo?.fields?.file?.details?.image?.height}
                 width={data?.siteLogo?.fields?.file?.details?.image?.width}
