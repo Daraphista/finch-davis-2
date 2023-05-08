@@ -11,7 +11,7 @@ export default function InteriorHero({ title, subtitle }) {
 
       <div className="pointer-events-none absolute inset-0 overflow-hidden"></div>
       <div className="container relative z-10 mx-auto max-w-screen-2xl px-8 pb-16 pt-24 md:pb-24 md:pt-32 lg:pb-40">
-        <div className="flex justify-center lg:mt-8">
+        <div className="text-center lg:mt-8">
           {title && (
             <h1 className="mt-3 font-heading text-4xl font-normal text-primary-950 md:text-5xl xl:text-6xl">
               {title}
