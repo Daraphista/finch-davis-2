@@ -46,7 +46,7 @@ export default function HeroContactForm({
       <div className="md:h-22 h-20 lg:h-24 xl:h-28"></div>
 
       <div className="pointer-events-none absolute inset-0 overflow-hidden"></div>
-      <div className="container relative z-1 max-w-screen-2xl py-12 md:py-16 lg:py-20 xl:py-24 2xl:py-28">
+      <div className="container relative z-1 max-w-screen-2xl py-12 md:py-16 lg:py-20">
         <div className="grid items-start gap-8 lg:grid-cols-12">
           <div className="lg:col-span-6 lg:mt-5">
             {title && (
