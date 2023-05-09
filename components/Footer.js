@@ -28,7 +28,7 @@ export default async function Footer() {
                   href={socialMediaLink?.fields?.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  key={socialMediaLink?.sys?.id}
+                  key={`${socialMediaLink?.sys?.id}${uniqid()}`}
                 >
                   <span className="sr-only">
                     {socialMediaLink?.fields?.title}
