@@ -7,7 +7,7 @@ export default function FooterEmailSignup({ title }) {
         <div className="rounded-sm border-2 border-primary-500 px-6 py-6 md:px-12 md:py-12 lg:px-16 lg:py-16 xl:flex xl:items-center">
           <div className="xl:-mt-2 xl:w-0 xl:flex-1">
             {title && (
-              <h2 className="font-heading text-2xl font-semibold text-white md:text-4xl">
+              <h2 className="font-heading text-2xl text-white md:text-4xl">
                 {title}
               </h2>
             )}
