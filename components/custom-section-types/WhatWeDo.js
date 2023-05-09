@@ -41,7 +41,7 @@ export default function WhatWeDo({
                         aria-hidden="true"
                       />
                     </div>
-                    {feature.name}
+                    {customContentItem?.fields?.title}
                   </dt>
                   <dd className="mt-2 text-base leading-7 text-gray-600">
                     {feature.description}
