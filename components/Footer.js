@@ -23,7 +23,7 @@ export default async function Footer() {
           {data?.footerSocialMediaLinks && (
             <div class="mt-5 flex justify-center space-x-5">
               {data?.footerSocialMediaLinks?.map((socialMediaLink) => (
-                <a
+                <Link
                   class="text-gray-400 hover:text-white"
                   href="#f"
                   target="_blank"
@@ -35,7 +35,7 @@ export default async function Footer() {
                       __html: socialMediaLink?.fields?.iconSvg,
                     }}
                   />
-                </a>
+                </Link>
               ))}
             </div>
           )}
