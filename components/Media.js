@@ -6,7 +6,7 @@ export default function Media({ media }) {
   if (/(video)/.test(media?.fields?.file?.contentType)) {
     return (
       <video
-        className="aspect-[16/9] w-full bg-gray-500 shadow-lg"
+        className="aspect-[16/9] w-full shadow-lg"
         src={`https:${media.fields.file.url}`}
         autoPlay
         muted
@@ -19,7 +19,7 @@ export default function Media({ media }) {
   if (/(image)/.test(media?.fields?.file?.contentType)) {
     return (
       <Image
-        className="relative overflow-hidden bg-gray-500 text-[0] shadow-lg"
+        className="relative overflow-hidden text-[0] shadow-lg"
         src={`https:${media?.fields?.file?.url}`}
         height={media?.fields?.file?.details?.image?.height}
         width={media?.fields?.file?.details?.image?.width}
@@ -30,7 +30,7 @@ export default function Media({ media }) {
   }
 
   return (
-    <div className="relative aspect-[16/9] w-full overflow-hidden bg-gray-500 shadow-lg">
+    <div className="relative aspect-[16/9] w-full overflow-hidden shadow-lg">
       <Image src={ogImage} alt="" fill />
     </div>
   );
