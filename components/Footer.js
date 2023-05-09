@@ -29,7 +29,9 @@ export default async function Footer() {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <span className="sr-only">{socialMediaLink?.fields?.title}</span>
+                  <span className="sr-only">
+                    {socialMediaLink?.fields?.title}
+                  </span>
                   <div
                     dangerouslySetInnerHTML={{
                       __html: socialMediaLink?.fields?.iconSvg,
