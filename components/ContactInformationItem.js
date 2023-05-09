@@ -59,5 +59,16 @@ const options = {
         </tbody>
       </table>
     ),
+    [BLOCKS.TABLE_ROW]: (node, children) => (
+      <tr className="flex space-x-3">
+        <td className="inline-block w-9">
+          {node?.content?.[0]?.content?.[0]?.content?.[0]?.value}
+        </td>
+        <td>
+          {node?.content?.[1]?.content?.[0]?.content?.[0]?.value}
+        </td>
+
+      </tr>
+    ),
   },
 };
