@@ -97,7 +97,7 @@ const FooterLogo = ({ footerLogo, metaData }) => {
       <div className="">
         <Link href="/" className="mx-auto block w-fit">
           <Image
-            className="h-16"
+            className="h-16 w-auto"
             src={`https:${footerLogo?.fields?.file?.url}`}
             height={footerLogo?.fields?.file?.details?.image?.height}
             width={footerLogo?.fields?.file?.details?.image?.width}
