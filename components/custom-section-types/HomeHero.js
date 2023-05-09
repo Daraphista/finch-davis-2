@@ -1,4 +1,5 @@
 import Button from "../Button";
+import Media from "../Media";
 
 export default function HomeHero({ title, subtitle, buttons, media }) {
   return (
@@ -39,11 +40,7 @@ export default function HomeHero({ title, subtitle, buttons, media }) {
           </div>
           <div>
             <figure className="aspect-h-9 aspect-w-16 overflow-hidden rounded-sm">
-              <img
-                className="h-full w-full object-cover object-center"
-                src="https://fluxconsole.com/files/view/235810"
-                alt=""
-              />
+              <Media media={media} />
             </figure>
           </div>
         </div>
