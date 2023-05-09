@@ -43,7 +43,16 @@ export default function WhatWeDo({
                   className="relative pl-16"
                 >
                   <dt className="text-base font-semibold leading-7 text-gray-900">
-                    <div className="absolute left-0 top-0 flex h-10 w-10 items-center justify-center rounded-lg bg-indigo-600"></div>
+                    <div className="absolute left-0 top-0 flex h-10 w-10 items-center justify-center rounded-sm bg-primary-600">
+                      {customContentItem?.fields?.iconSvg && (
+                        <div
+                          dangerouslySetInnerHTML={{
+                            __html: customContentItem?.fields?.iconSvg,
+                          }}
+                        />
+                      )}
+                      <div className="absolute -right-1.5 -top-1.5 h-10 w-10 border-r-2 border-t-2 border-primary-300"></div>
+                    </div>
                     {customContentItem?.fields?.title}
                   </dt>
                   {documentToReactComponents(
