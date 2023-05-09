@@ -18,7 +18,7 @@ export default function Testimonials({ title, subtitle }) {
           )}
         </div>
         <div className="mx-auto mt-12 grid max-w-2xl grid-cols-1 grid-rows-1 gap-4 text-sm leading-6 text-gray-900 sm:mt-14 sm:grid-cols-2 xl:mx-0 xl:max-w-none xl:grid-flow-col xl:grid-cols-4">
-          <figure className="col-span-2 hidden sm:block sm:bg-white sm:shadow-lg sm:ring-1 sm:ring-primary-900/10 xl:col-start-2 xl:row-end-1">
+          <figure className="col-span-2 hidden rounded sm:block sm:bg-white sm:shadow-lg sm:ring-1 sm:ring-primary-900/10 xl:col-start-2 xl:row-end-1">
             <blockquote className="p-12 text-xl font-semibold leading-8 tracking-tight text-gray-900">
               <p>
                 “Integer id nunc sit semper purus. Bibendum at lacus ut arcu
