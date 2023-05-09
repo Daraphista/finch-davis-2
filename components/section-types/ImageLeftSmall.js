@@ -14,12 +14,12 @@ export default function ImageRight({
     <section className="relative bg-transparent" id={id}>
       <div className="container relative z-1 max-w-screen-xl pb-12 pt-12 md:pb-12 md:pt-12 lg:pb-16 lg:pt-16 xl:pb-20 xl:pt-20">
         <div className="mt-6 grid justify-center gap-10 md:mt-8 lg:mt-6 lg:grid-cols-5 xl:gap-x-12">
-          <div className="relative w-full max-w-2xl lg:col-span-2 lg:max-w-none">
+          <div className="relative w-full max-w-2xl lg:col-span-2 lg:col-start-1 lg:max-w-none">
             <div className="relative flex justify-end">
               <Media media={media} />
             </div>
           </div>
-          <div className="relative lg:col-span-3 lg:col-start-1 lg:row-start-1">
+          <div className="relative lg:col-span-3 lg:col-start-3 lg:row-start-1">
             <div className="relative">
               {title && (
                 <h2 className="font-heading text-2xl font-semibold text-gray-900 md:text-3xl xl:text-4xl">
