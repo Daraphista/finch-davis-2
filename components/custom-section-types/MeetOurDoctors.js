@@ -49,9 +49,11 @@ export default function MeetOurDoctors({
                       {customContentItem?.fields?.title}
                     </h3>
                   )}
-                  <p class="text-base leading-7 text-gray-600">
-                    Senior Designer
-                  </p>
+                  {customContentItem?.fields?.subtitle && (
+                    <p class="text-base leading-7 text-gray-600">
+                      {customContentItem?.fields?.subtitle}
+                    </p>
+                  )}
                   <p class="mt-6 text-base leading-7 text-gray-600">
                     Quia illum aut in beatae. Possimus dolores aliquid
                     accusantium aut in ut non assumenda. Enim iusto molestias
