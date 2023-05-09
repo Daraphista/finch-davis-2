@@ -1,4 +1,15 @@
-export default function MeetOurDoctors({ title }) {
+import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
+import { BLOCKS } from "@contentful/rich-text-types";
+
+const options = {
+  renderNode: {
+    [BLOCKS.PARAGRAPH]: (node, children) => (
+      <p class="mt-6 text-lg leading-8 text-gray-600">{children}</p>
+    ),
+  },
+};
+
+export default function MeetOurDoctors({ title, unformattedBody }) {
   return (
     <div class="bg-white py-24 sm:py-32">
       <div class="mx-auto max-w-7xl px-6 lg:px-8">
@@ -8,10 +19,9 @@ export default function MeetOurDoctors({ title }) {
               {title}
             </h2>
           )}
-          <p class="mt-6 text-lg leading-8 text-gray-600">
-            We're a dynamic group of individuals who are passionate about what
-            we do and dedicated to delivering the best results for our clients.
-          </p>
+
+          {unformattedBody &&
+            documentToReactComponents(unformattedBody, options)}
         </div>
         <ul
           role="list"
