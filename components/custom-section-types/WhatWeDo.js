@@ -10,6 +10,14 @@ const options = {
   },
 };
 
+const customItemOptions = {
+  renderNode: {
+    [BLOCKS.PARAGRAPH]: (node, children) => (
+      <dd className="mt-2 text-base leading-7 text-gray-600">{children}</dd>
+    ),
+  },
+};
+
 export default function WhatWeDo({
   title,
   unformattedBody,
@@ -35,17 +43,13 @@ export default function WhatWeDo({
                   className="relative pl-16"
                 >
                   <dt className="text-base font-semibold leading-7 text-gray-900">
-                    <div className="absolute left-0 top-0 flex h-10 w-10 items-center justify-center rounded-lg bg-indigo-600">
-                      <feature.icon
-                        className="h-6 w-6 text-white"
-                        aria-hidden="true"
-                      />
-                    </div>
+                    <div className="absolute left-0 top-0 flex h-10 w-10 items-center justify-center rounded-lg bg-indigo-600"></div>
                     {customContentItem?.fields?.title}
                   </dt>
-                  <dd className="mt-2 text-base leading-7 text-gray-600">
-                    {feature.description}
-                  </dd>
+                  {documentToReactComponents(
+                    customContentItem?.fields?.body,
+                    customItemOptions
+                  )}
                 </div>
               ))}
             </dl>
