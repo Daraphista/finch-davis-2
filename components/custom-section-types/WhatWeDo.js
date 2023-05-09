@@ -1,4 +1,15 @@
-export default function WhatWeDo({ title }) {
+import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
+import { BLOCKS } from "@contentful/rich-text-types";
+
+const options = {
+  renderNode: {
+    [BLOCKS.PARAGRAPH]: (node, children) => (
+      <p className="mt-6 text-lg leading-8 text-gray-600">{children}</p>
+    ),
+  },
+};
+
+export default function WhatWeDo({ title, unformattedBody }) {
   return (
     <div className="bg-white py-24 sm:py-32">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
@@ -8,11 +19,7 @@ export default function WhatWeDo({ title }) {
               {title}
             </h2>
           )}
-          <p className="mt-6 text-lg leading-8 text-gray-600">
-            Quis tellus eget adipiscing convallis sit sit eget aliquet quis.
-            Suspendisse eget egestas a elementum pulvinar et feugiat blandit at.
-            In mi viverra elit nunc.
-          </p>
+          {documentToReactComponents(unformattedBody, options)}
         </div>
         <div className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-4xl">
           <dl className="grid max-w-xl grid-cols-1 gap-x-8 gap-y-10 lg:max-w-none lg:grid-cols-2 lg:gap-y-16">
