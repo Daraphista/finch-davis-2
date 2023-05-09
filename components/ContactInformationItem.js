@@ -52,5 +52,12 @@ const options = {
         </span>
       );
     },
+    [BLOCKS.TABLE]: (node, children) => (
+      <table>
+        <tbody className="flex flex-col space-y-1 text-base text-gray-300">
+          {children}
+        </tbody>
+      </table>
+    ),
   },
 };
