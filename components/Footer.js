@@ -25,7 +25,7 @@ export default async function Footer() {
               {data?.footerSocialMediaLinks?.map((socialMediaLink) => (
                 <Link
                   class="text-gray-400 hover:text-white"
-                  href="#f"
+                  href={socialMediaLink?.fields?.url}
                   target="_blank"
                   rel="noopener noreferrer"
                 >
