@@ -10,6 +10,14 @@ const options = {
   },
 };
 
+const customBodyOptions = {
+  renderNode: {
+    [BLOCKS.PARAGRAPH]: (node, children) => (
+      <p class="mt-6 text-base leading-7 text-gray-600">{children}</p>
+    ),
+  },
+};
+
 export default function MeetOurDoctors({
   title,
   unformattedBody,
@@ -54,12 +62,11 @@ export default function MeetOurDoctors({
                       {customContentItem?.fields?.subtitle}
                     </p>
                   )}
-                  <p class="mt-6 text-base leading-7 text-gray-600">
-                    Quia illum aut in beatae. Possimus dolores aliquid
-                    accusantium aut in ut non assumenda. Enim iusto molestias
-                    aut deleniti eos aliquid magnam molestiae. At et non
-                    possimus ab. Magni labore molestiae nulla qui.
-                  </p>
+                  {customContentItem?.fields?.body &&
+                    documentToReactComponents(
+                      customContentItem?.fields?.body,
+                      customBodyOptions
+                    )}
                 </div>
               </li>
             ))}
