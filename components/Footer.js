@@ -29,7 +29,7 @@ export default async function Footer() {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <span class="sr-only">LinkedIn</span>
+                  <span class="sr-only">{socialMediaLink?.fields?.title}</span>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     class="h-8 w-8 fill-current"
