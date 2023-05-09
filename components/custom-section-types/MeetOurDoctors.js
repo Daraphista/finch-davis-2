@@ -6,7 +6,7 @@ import Image from "next/image";
 const options = {
   renderNode: {
     [BLOCKS.PARAGRAPH]: (node, children) => (
-      <p class="mt-6 text-lg leading-8 text-gray-600">{children}</p>
+      <p className="mt-6 text-lg leading-8 text-gray-600">{children}</p>
     ),
   },
 };
@@ -14,7 +14,7 @@ const options = {
 const customBodyOptions = {
   renderNode: {
     [BLOCKS.PARAGRAPH]: (node, children) => (
-      <p class="mt-6 text-base leading-7 text-gray-600">{children}</p>
+      <p className="mt-6 text-base leading-7 text-gray-600">{children}</p>
     ),
   },
 };
@@ -25,11 +25,11 @@ export default function MeetOurDoctors({
   customContentCollection,
 }) {
   return (
-    <div class="bg-white py-24 sm:py-32">
-      <div class="mx-auto max-w-7xl px-6 lg:px-8">
-        <div class="mx-auto max-w-2xl sm:text-center">
+    <div className="bg-white py-24 sm:py-32">
+      <div className="mx-auto max-w-7xl px-6 lg:px-8">
+        <div className="mx-auto max-w-2xl sm:text-center">
           {title && (
-            <h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+            <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
               {title}
             </h2>
           )}
@@ -40,11 +40,11 @@ export default function MeetOurDoctors({
         {customContentCollection && (
           <ul
             role="list"
-            class="mx-auto mt-20 grid max-w-2xl grid-cols-1 gap-x-6 gap-y-20 sm:grid-cols-2 lg:max-w-4xl lg:gap-x-8 xl:max-w-none"
+            className="mx-auto mt-20 grid max-w-2xl grid-cols-1 gap-x-6 gap-y-20 sm:grid-cols-2 lg:max-w-4xl lg:gap-x-8 xl:max-w-none"
           >
             {customContentCollection?.map((customContentItem) => (
               <li
-                class="flex flex-col gap-6 xl:flex-row"
+                className="flex flex-col gap-6 xl:flex-row"
                 key={`${customContentItem?.sys?.id}${uniqid()}`}
               >
                 <Image
@@ -60,14 +60,14 @@ export default function MeetOurDoctors({
                   }
                   alt=""
                 />
-                <div class="flex-auto">
+                <div className="flex-auto">
                   {customContentItem?.fields?.title && (
-                    <h3 class="text-lg font-semibold leading-8 tracking-tight text-gray-900">
+                    <h3 className="text-lg font-semibold leading-8 tracking-tight text-gray-900">
                       {customContentItem?.fields?.title}
                     </h3>
                   )}
                   {customContentItem?.fields?.subtitle && (
-                    <p class="text-base leading-7 text-gray-600">
+                    <p className="text-base leading-7 text-gray-600">
                       {customContentItem?.fields?.subtitle}
                     </p>
                   )}
