@@ -1,4 +1,4 @@
-export default function MeetOurTeam() {
+export default function MeetOurDoctors() {
   return (
     <div class="bg-white py-24 sm:py-32">
       <div class="mx-auto max-w-7xl px-6 lg:px-8">
