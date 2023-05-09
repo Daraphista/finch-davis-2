@@ -1,5 +1,6 @@
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
 import { BLOCKS } from "@contentful/rich-text-types";
+import uniqid from "uniqid";
 
 const options = {
   renderNode: {
@@ -33,7 +34,10 @@ export default function MeetOurDoctors({
             class="mx-auto mt-20 grid max-w-2xl grid-cols-1 gap-x-6 gap-y-20 sm:grid-cols-2 lg:max-w-4xl lg:gap-x-8 xl:max-w-none"
           >
             {customContentCollection?.map((customContentItem) => (
-              <li class="flex flex-col gap-6 xl:flex-row">
+              <li
+                class="flex flex-col gap-6 xl:flex-row"
+                key={`${customContentItem?.sys?.id}${uniqid()}`}
+              >
                 <img
                   class="aspect-[4/5] w-52 flex-none rounded-2xl object-cover"
                   src="https://images.unsplash.com/photo-1519345182560-3f2917c472ef?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80"
