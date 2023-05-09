@@ -1,6 +1,7 @@
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
 import { BLOCKS } from "@contentful/rich-text-types";
 import uniqid from "uniqid";
+import Image from "next/image";
 
 const options = {
   renderNode: {
@@ -46,9 +47,17 @@ export default function MeetOurDoctors({
                 class="flex flex-col gap-6 xl:flex-row"
                 key={`${customContentItem?.sys?.id}${uniqid()}`}
               >
-                <img
-                  class="aspect-[4/5] w-52 flex-none rounded-2xl object-cover"
-                  src="https://images.unsplash.com/photo-1519345182560-3f2917c472ef?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80"
+                <Image
+                  className="aspect-[4/5] w-52 flex-none rounded-2xl object-cover"
+                  src={`https:${customContentItem?.fields?.media?.fields?.file?.url}`}
+                  height={
+                    customContentItem?.fields?.media?.fields?.file?.details
+                      ?.image?.height
+                  }
+                  width={
+                    customContentItem?.fields?.media?.fields?.file?.details
+                      ?.image?.width
+                  }
                   alt=""
                 />
                 <div class="flex-auto">
