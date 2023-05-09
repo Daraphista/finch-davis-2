@@ -44,9 +44,11 @@ export default function MeetOurDoctors({
                   alt=""
                 />
                 <div class="flex-auto">
-                  <h3 class="text-lg font-semibold leading-8 tracking-tight text-gray-900">
-                    Leonard Krasner
-                  </h3>
+                  {customContentItem?.fields?.title && (
+                    <h3 class="text-lg font-semibold leading-8 tracking-tight text-gray-900">
+                      {customContentItem?.fields?.title}
+                    </h3>
+                  )}
                   <p class="text-base leading-7 text-gray-600">
                     Senior Designer
                   </p>
