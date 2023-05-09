@@ -6,3 +6,4 @@ export { default as FooterEmailSignup } from "./FooterEmailSignup";
 export { default as ImageRight } from "./ImageRight";
 export { default as ImageRightDetachedTitle } from "./ImageRightDetachedTitle";
 export { default as ImageRightSmall } from "./ImageRightSmall";
+export { default as ImageLeftSmall } from "./ImageLeftSmall";
