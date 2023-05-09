@@ -19,7 +19,7 @@ export default function ImageRight({
               <Media media={media} />
             </div>
           </div>
-          <div className="relative lg:col-start-1 lg:row-start-1">
+          <div className="relative lg:col-start-1 lg:col-span-3 lg:row-start-1">
             <div className="relative">
               {title && (
                 <h2 className="font-heading text-2xl font-semibold text-gray-900 md:text-3xl xl:text-4xl">
