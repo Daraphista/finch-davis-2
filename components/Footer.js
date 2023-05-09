@@ -21,15 +21,15 @@ export default async function Footer() {
           <ModiphyBannerFooter metaData={metaData} />
 
           {data?.footerSocialMediaLinks && (
-            <div class="mt-5 flex justify-center space-x-5">
+            <div className="mt-5 flex justify-center space-x-5">
               {data?.footerSocialMediaLinks?.map((socialMediaLink) => (
                 <Link
-                  class="text-gray-400 hover:text-white"
+                  className="text-gray-400 hover:text-white"
                   href={socialMediaLink?.fields?.url}
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <span class="sr-only">{socialMediaLink?.fields?.title}</span>
+                  <span className="sr-only">{socialMediaLink?.fields?.title}</span>
                   <div
                     dangerouslySetInnerHTML={{
                       __html: socialMediaLink?.fields?.iconSvg,
