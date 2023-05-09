@@ -67,5 +67,8 @@ const options = {
         <td>{node?.content?.[1]?.content?.[0]?.content?.[0]?.value}</td>
       </tr>
     ),
+    [BLOCKS.TABLE_CELL]: (node, children) => (
+      <td>{node?.content?.[0]?.content?.[0]?.value}</td>
+    ),
   },
 };
