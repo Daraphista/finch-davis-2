@@ -39,7 +39,7 @@ export default function WhyChooseUs({
                     >
                       <dt className="inline font-semibold text-gray-900">
                         <div
-                          className="text-primary-600"
+                          className="absolute left-1 top-1 text-primary-600"
                           dangerouslySetInnerHTML={{
                             __html: customContentItem?.fields?.iconSvg,
                           }}
