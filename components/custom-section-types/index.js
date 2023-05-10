@@ -5,3 +5,4 @@ export { default as Testimonials } from "./Testimonials";
 export { default as Instagram } from "./Instagram";
 export { default as WhatWeDo } from "./WhatWeDo";
 export { default as MeetOurDoctors } from "./MeetOurDoctors";
+export { default as MeetOurStaff } from "./MeetOurStaff";
