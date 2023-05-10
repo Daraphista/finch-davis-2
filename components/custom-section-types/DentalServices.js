@@ -104,7 +104,7 @@ export default function DentalServices({
                     className="flex flex-col"
                     key={`${dentalCategory?.sys?.id}${uniqid()}`}
                   >
-                    <dt className="text-lg font-semibold leading-7 text-gray-900">
+                    <dt className="text-2xl font-semibold leading-7 text-gray-900">
                       <div className="relative mb-6 flex h-10 w-10 items-center justify-center rounded-sm bg-primary-600">
                         {dentalCategory?.fields?.iconSvg && (
                           <div
