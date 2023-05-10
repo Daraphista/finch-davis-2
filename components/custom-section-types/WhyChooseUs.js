@@ -11,7 +11,7 @@ export default function WhyChooseUs({
   return (
     <section className="overflow-hidden">
       <div className="container max-w-screen-2xl py-12 md:py-16 lg:py-20">
-        <div className="grid grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:grid-cols-2 lg:items-center 2xl:border 2xl:p-12">
+        <div className="grid grid-cols-1 gap-x-8 gap-y-16 border-primary-200 sm:gap-y-20 lg:grid-cols-2 lg:items-center 2xl:border-2 2xl:p-12">
           <div className="px-6 md:px-0 lg:pr-4">
             <div className="mx-auto max-w-2xl lg:mx-0">
               <div>
