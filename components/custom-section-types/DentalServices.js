@@ -40,29 +40,59 @@ export default function DentalServices({
         {customContentCollection && (
           <div className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-none">
             <dl className="grid max-w-xl grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none lg:grid-cols-3">
-              {customContentCollection?.map((dentalService) => {
+              {customContentCollection?.map((dentalCategory) => {
                 if (
-                  dentalService?.sys?.contentType?.sys?.id ===
+                  dentalCategory?.sys?.contentType?.sys?.id ===
                   "dentistryCategory"
                 ) {
                   return (
                     <div
                       className="flex flex-col bg-primary-100 px-6 py-8 lg:col-span-3"
-                      key={`${dentalService?.sys?.id}${uniqid()}`}
+                      key={`${dentalCategory?.sys?.id}${uniqid()}`}
                     >
                       <dt className="flex gap-6 font-heading text-2xl font-semibold leading-7 text-primary-600">
                         <div className="relative mb-6 flex h-10 w-10 items-center justify-center rounded-sm bg-primary-600">
-                          {dentalService?.fields?.iconSvg && (
+                          {dentalCategory?.fields?.iconSvg && (
                             <div
                               dangerouslySetInnerHTML={{
-                                __html: dentalService?.fields?.iconSvg,
+                                __html: dentalCategory?.fields?.iconSvg,
                               }}
                             />
                           )}
                           <div className="absolute -right-1.5 -top-1.5 h-10 w-10 border-r-2 border-t-2 border-primary-300"></div>
                         </div>
-                        {dentalService?.fields?.title}
+                        {dentalCategory?.fields?.title}
                       </dt>
+
+                      {dentalCategory?.fields?.dentalServices &&
+                        dentalCategory?.fields?.dentalServices.map(
+                          (dentalService) => (
+                            <div
+                              className="flex flex-col"
+                              key={`${dentalService?.sys?.id}${uniqid()}`}
+                            >
+                              <dt className="text-lg font-semibold leading-7 text-gray-900">
+                                {dentalService?.fields?.title}
+                              </dt>
+
+                              <dd className="mt-1 flex flex-auto flex-col text-base leading-7 text-gray-600">
+                                {documentToReactComponents(
+                                  dentalService?.fields?.body,
+                                  dentalServiceOptions
+                                )}
+
+                                <p className="mt-6">
+                                  <Link
+                                    href="/"
+                                    className="text-base font-semibold leading-6 text-primary-600 hover:text-primary-900"
+                                  >
+                                    Learn more <span aria-hidden="true">→</span>
+                                  </Link>
+                                </p>
+                              </dd>
+                            </div>
+                          )
+                        )}
                     </div>
                   );
                 }
@@ -70,25 +100,25 @@ export default function DentalServices({
                 return (
                   <div
                     className="flex flex-col"
-                    key={`${dentalService?.sys?.id}${uniqid()}`}
+                    key={`${dentalCategory?.sys?.id}${uniqid()}`}
                   >
                     <dt className="text-lg font-semibold leading-7 text-gray-900">
                       <div className="relative mb-6 flex h-10 w-10 items-center justify-center rounded-sm bg-primary-600">
-                        {dentalService?.fields?.iconSvg && (
+                        {dentalCategory?.fields?.iconSvg && (
                           <div
                             dangerouslySetInnerHTML={{
-                              __html: dentalService?.fields?.iconSvg,
+                              __html: dentalCategory?.fields?.iconSvg,
                             }}
                           />
                         )}
                         <div className="absolute -right-1.5 -top-1.5 h-10 w-10 border-r-2 border-t-2 border-primary-300"></div>
                       </div>
-                      {dentalService?.fields?.title}
+                      {dentalCategory?.fields?.title}
                     </dt>
 
                     <dd className="mt-1 flex flex-auto flex-col text-base leading-7 text-gray-600">
                       {documentToReactComponents(
-                        dentalService?.fields?.body,
+                        dentalCategory?.fields?.body,
                         dentalServiceOptions
                       )}
 
