@@ -169,7 +169,7 @@ export default function HeroContactForm({
 
       <div className="relative z-1">
         <svg
-          className="w-full fill-current text-white"
+          className="w-full fill-current text-gray-900"
           viewBox="0 0 1000 100"
           preserveAspectRatio="none"
         >
