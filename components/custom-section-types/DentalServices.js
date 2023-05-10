@@ -64,35 +64,37 @@ export default function DentalServices({
                         {dentalCategory?.fields?.title}
                       </dt>
 
-                      {dentalCategory?.fields?.dentalServices &&
-                        dentalCategory?.fields?.dentalServices.map(
-                          (dentalService) => (
-                            <div
-                              className="flex flex-col"
-                              key={`${dentalService?.sys?.id}${uniqid()}`}
-                            >
-                              <dt className="text-lg font-semibold leading-7 text-gray-900">
-                                {dentalService?.fields?.title}
-                              </dt>
-
-                              <dd className="mt-1 flex flex-auto flex-col text-base leading-7 text-gray-600">
-                                {documentToReactComponents(
-                                  dentalService?.fields?.body,
-                                  dentalServiceOptions
-                                )}
-
-                                <p className="mt-6">
-                                  <Link
-                                    href="/"
-                                    className="text-base font-semibold leading-6 text-primary-600 hover:text-primary-900"
-                                  >
-                                    Learn more <span aria-hidden="true">→</span>
-                                  </Link>
-                                </p>
-                              </dd>
-                            </div>
-                          )
-                        )}
+                      {dentalCategory?.fields?.dentalServices && (
+                        <div className="grid grid-cols-3">
+                          {dentalCategory?.fields?.dentalServices.map(
+                            (dentalService) => (
+                              <div
+                                className="flex flex-col"
+                                key={`${dentalService?.sys?.id}${uniqid()}`}
+                              >
+                                <dt className="text-lg font-semibold leading-7 text-gray-900">
+                                  {dentalService?.fields?.title}
+                                </dt>
+                                <dd className="mt-1 flex flex-auto flex-col text-base leading-7 text-gray-600">
+                                  {documentToReactComponents(
+                                    dentalService?.fields?.body,
+                                    dentalServiceOptions
+                                  )}
+                                  <p className="mt-6">
+                                    <Link
+                                      href="/"
+                                      className="text-base font-semibold leading-6 text-primary-600 hover:text-primary-900"
+                                    >
+                                      Learn more{" "}
+                                      <span aria-hidden="true">→</span>
+                                    </Link>
+                                  </p>
+                                </dd>
+                              </div>
+                            )
+                          )}
+                        </div>
+                      )}
                     </div>
                   );
                 }
