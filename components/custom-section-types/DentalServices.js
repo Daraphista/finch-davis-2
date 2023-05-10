@@ -41,11 +41,13 @@ export default function DentalServices({
           <div className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-none">
             <dl className="grid max-w-xl grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none lg:grid-cols-3">
               {customContentCollection?.map((dentalService) => {
-
-                if (dentalService?.sys?.contentType?.sys?.id === "dentistryCategory") {
+                if (
+                  dentalService?.sys?.contentType?.sys?.id ===
+                  "dentistryCategory"
+                ) {
                   return (
                     <div
-                      className="flex flex-col lg:col-span-3"
+                      className="flex flex-col bg-primary-100 lg:col-span-3"
                       key={`${dentalService?.sys?.id}${uniqid()}`}
                     >
                       <dt className="text-lg font-semibold leading-7 text-gray-900">
@@ -79,9 +81,8 @@ export default function DentalServices({
                       </dd>
                     </div>
                   );
-
                 }
-                
+
                 return (
                   <div
                     className="flex flex-col"
