@@ -47,7 +47,7 @@ export default function DentalServices({
                 ) {
                   return (
                     <div
-                      className="flex flex-col bg-primary-100 px-6 py-8 lg:col-span-3"
+                      className="flex flex-col bg-primary-100 px-8 py-8 lg:col-span-3"
                       key={`${dentalCategory?.sys?.id}${uniqid()}`}
                     >
                       <dt className="flex gap-6 font-heading text-2xl font-semibold leading-7 text-primary-600">
