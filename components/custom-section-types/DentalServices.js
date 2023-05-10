@@ -118,7 +118,7 @@ export default function DentalServices({
                       {dentalCategory?.fields?.title}
                     </dt>
 
-                    <dd className="mt-1 flex flex-auto flex-col text-base leading-7 text-gray-600">
+                    <dd className="mt-3 flex flex-auto flex-col text-base leading-7 text-gray-600">
                       {documentToReactComponents(
                         dentalCategory?.fields?.body,
                         dentalServiceOptions
