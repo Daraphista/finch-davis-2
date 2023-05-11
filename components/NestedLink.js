@@ -23,9 +23,7 @@ export default function NestedLink({ navLink, isScrolling }) {
         <Popover.Button>
           <Link
             href={`/${navLink?.fields?.slug}`}
-            className={`hover:bg-green relative flex items-center font-semibold text-primary-100 hover:text-white ${
-              isScrolling && "text-black hover:text-gray-600"
-            }`}
+            className={`relative flex items-center text-base font-semibold uppercase tracking-wider text-primary-800 hover:text-black`}
           >
             <span>{navLink?.fields?.title}</span>
             <svg
