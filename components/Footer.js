@@ -83,7 +83,7 @@ const FooterNavigation = ({ footerNavigation }) => {
               <Link
                 href={`${footerNavItem?.fields?.slug}`}
                 target="_self"
-                className="block text-base font-medium tracking-wide text-gray-300 hover:text-white"
+                className="block text-base font-semibold py-2 uppercase tracking-wide text-gray-200 hover:text-white"
                 key={`${footerNavItem?.sys?.id}${uniqid()}`}
               >
                 {footerNavItem?.fields?.title}
