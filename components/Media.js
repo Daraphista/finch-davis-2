@@ -19,11 +19,10 @@ export default function Media({ media }) {
   if (/(image)/.test(media?.fields?.file?.contentType)) {
     return (
       <Image
-        className="relative overflow-hidden text-[0] drop-shadow-lg"
+        className="relative overflow-hidden object-cover text-[0] drop-shadow-lg"
         src={`https:${media?.fields?.file?.url}`}
         height={media?.fields?.file?.details?.image?.height}
         width={media?.fields?.file?.details?.image?.width}
-        objectfit="cover"
         alt=""
       />
     );
