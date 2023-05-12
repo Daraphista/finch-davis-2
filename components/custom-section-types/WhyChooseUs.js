@@ -1,5 +1,6 @@
 import Button from "../Button";
 import uniqid from "uniqid";
+import Media from "../Media";
 
 export default function WhyChooseUs({
   title,
@@ -7,6 +8,7 @@ export default function WhyChooseUs({
   body,
   customContentCollection,
   buttons,
+  media,
 }) {
   return (
     <section className="overflow-hidden">
@@ -86,11 +88,7 @@ export default function WhyChooseUs({
           </div>
           <div className="sm:px-6 lg:px-0">
             <figure className="aspect-h-9 aspect-w-16 overflow-hidden rounded-sm lg:aspect-h-3 lg:aspect-w-4">
-              <img
-                className="h-full w-full object-cover object-center"
-                src="https://via.placeholder.com/1600x1200"
-                alt=""
-              />
+              <Media media={media} />
             </figure>
           </div>
         </div>
