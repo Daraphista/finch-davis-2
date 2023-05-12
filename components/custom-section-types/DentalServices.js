@@ -140,7 +140,7 @@ export default function DentalServices({
               })}
 
               <Link
-                className="group flex flex-col border-2 border-primary-200 bg-primary-50 p-6 hover:border-primary-400"
+                className="group flex flex-col border-2 border-primary-200 p-6 hover:border-primary-400"
                 href="/"
               >
                 <dt className="text-2xl font-bold leading-7 text-gray-900">
