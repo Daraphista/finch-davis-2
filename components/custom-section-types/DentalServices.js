@@ -65,7 +65,9 @@ export default function DentalServices({
                       </dt>
 
                       {dentalCategory?.fields?.dentalServices && (
-                        <div className="grid max-w-xl grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none lg:grid-cols-3">
+                        <div
+                          className={`grid max-w-xl grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none lg:grid-cols-${dentalCategory?.fields?.dentalServices?.length}`}
+                        >
                           {dentalCategory?.fields?.dentalServices.map(
                             (dentalService) => (
                               <div
