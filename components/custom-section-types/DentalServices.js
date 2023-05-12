@@ -50,8 +50,8 @@ export default function DentalServices({
                       className="flex flex-col bg-primary-100 px-8 py-8 lg:col-span-3"
                       key={`${dentalCategory?.sys?.id}${uniqid()}`}
                     >
-                      <dt className="flex gap-6 font-heading text-2xl font-semibold leading-7 text-primary-600">
-                        <div className="relative mb-6 flex h-10 w-10 items-center justify-center rounded-sm bg-primary-600">
+                      <dt className="mb-6 flex gap-6 font-heading text-2xl font-semibold leading-7 text-primary-600">
+                        <div className="relative flex h-10 w-10 items-center justify-center rounded-sm bg-primary-600">
                           {dentalCategory?.fields?.iconSvg && (
                             <div
                               dangerouslySetInnerHTML={{
