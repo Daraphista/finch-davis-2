@@ -13,7 +13,7 @@ export default function Instagram() {
           </h2>
         </div>
 
-        <div>
+        <div className="mt-10">
           <Script
             src="https://static.elfsight.com/platform/platform.js"
             data-use-service-core
