@@ -10,7 +10,13 @@ export default function Instagram() {
             Reprehenderit ea duis nisi ad commodo
           </h2>
         </div>
-       
+
+        <script
+          src="https://static.elfsight.com/platform/platform.js"
+          data-use-service-core
+          defer
+        ></script>
+        <div class="elfsight-app-22ac765d-29ef-4e1c-a064-67e09f96c58d"></div>
       </div>
     </section>
   );
