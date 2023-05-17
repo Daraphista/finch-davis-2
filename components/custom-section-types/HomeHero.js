@@ -1,5 +1,4 @@
 import Button from "../Button";
-import Media from "../Media";
 import Image from "next/image";
 
 export default function HomeHero({ title, subtitle, buttons, media }) {
@@ -12,19 +11,19 @@ export default function HomeHero({ title, subtitle, buttons, media }) {
 
       <div className="pointer-events-none absolute inset-0 overflow-hidden"></div>
 
-      <div class="absolute inset-0 z-10">
-        <div class="relative h-full w-full xl:container xl:max-w-screen-2xl">
-          <Image
-            alt=""
-            width="1097"
-            height="691"
-            decoding="async"
-            data-nimg="1"
-            className="absolute -right-[20vw] bottom-0 max-h-[648px] w-[75vw] -translate-y-14 sm:-right-[10vw] sm:w-[60vw] xl:-right-[5vw] xl:h-[70%] xl:w-auto"
-            src="/levy-and-vutera.png"
-          />
+      {media && /(image)/.test(media?.fields?.file?.contentType) && (
+        <div class="absolute inset-0 z-10">
+          <div class="relative h-full w-full xl:container xl:max-w-screen-2xl">
+            <Image
+              alt=""
+              src={`https:${media?.fields?.file?.url}`}
+              height={media?.fields?.file?.details?.image?.height}
+              width={media?.fields?.file?.details?.image?.width}
+              className="absolute -right-[20vw] bottom-0 max-h-[648px] w-[75vw] -translate-y-14 sm:-right-[10vw] sm:w-[60vw] xl:-right-[5vw] xl:h-[70%] xl:w-auto"
+            />
+          </div>
         </div>
-      </div>
+      )}
 
       <div className="container relative z-10 max-w-screen-2xl py-12 md:py-16 lg:py-20 xl:py-28 2xl:pt-32">
         <div className="grid items-center gap-8 lg:grid-cols-2 lg:gap-16">
