@@ -10,6 +10,22 @@ export default function HomeHero({ title, subtitle, buttons, media }) {
       <div className="md:h-22 h-20 lg:h-24 xl:h-28"></div>
 
       <div className="pointer-events-none absolute inset-0 overflow-hidden"></div>
+
+      <div class="absolute inset-0 z-10">
+        <div class="relative h-full w-full xl:container xl:max-w-screen-2xl">
+          <img
+            alt=""
+            width="3000"
+            height="2453"
+            decoding="async"
+            data-nimg="1"
+            class="absolute -right-[20vw] bottom-0 max-h-[648px] w-[75vw] sm:-right-[10vw] sm:w-[60vw] xl:-right-[5vw] xl:h-[95%] xl:w-auto"
+            srcset="/_next/image?url=https%3A%2F%2Fimages.ctfassets.net%2F5a65o1927eh3%2FMBuRVTWjLFDFpHWkRG5lb%2F36133974a13a55913ba00568239f258e%2FHero_Image.webp&amp;w=3840&amp;q=75 1x"
+            src="/_next/image?url=https%3A%2F%2Fimages.ctfassets.net%2F5a65o1927eh3%2FMBuRVTWjLFDFpHWkRG5lb%2F36133974a13a55913ba00568239f258e%2FHero_Image.webp&amp;w=3840&amp;q=75"
+          />
+        </div>
+      </div>
+
       <div className="container relative z-10 max-w-screen-2xl py-12 md:py-16 lg:py-20 xl:py-28 2xl:pt-32">
         <div className="grid items-center gap-8 lg:grid-cols-2 lg:gap-16">
           <div className="">
@@ -37,11 +53,6 @@ export default function HomeHero({ title, subtitle, buttons, media }) {
                 ))}
               </div>
             )}
-          </div>
-          <div>
-            <figure className="aspect-h-9 aspect-w-16 overflow-hidden rounded-sm">
-              <Media media={media} />
-            </figure>
           </div>
         </div>
       </div>
