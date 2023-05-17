@@ -19,7 +19,7 @@ export default function Instagram() {
             data-use-service-core
             defer
           ></Script>
-          <div class="elfsight-app-22ac765d-29ef-4e1c-a064-67e09f96c58d"></div>
+          <div className="elfsight-app-22ac765d-29ef-4e1c-a064-67e09f96c58d"></div>
         </div>
       </div>
     </section>
