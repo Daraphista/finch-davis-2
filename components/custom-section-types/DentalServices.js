@@ -140,10 +140,10 @@ export default function DentalServices({
               })}
 
               <Link
-                className="group flex flex-col border-2 border-primary-200 p-6 hover:border-primary-400"
+                className="group flex flex-col border-2 border-primary-200 p-12 hover:border-primary-400"
                 href="/"
               >
-                <dt className="text-2xl font-bold text-center leading-7 text-gray-900">
+                <dt className="text-center text-2xl font-bold leading-7 text-gray-900">
                   Request Appointment
                 </dt>
                 <dd className="mt-3 flex flex-auto flex-col text-center text-lg leading-7 text-primary-900">
