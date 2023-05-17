@@ -20,7 +20,7 @@ export default function HomeHero({ title, subtitle, buttons, media }) {
             height="691"
             decoding="async"
             data-nimg="1"
-            className="absolute -translate-y-14 -right-[20vw] bottom-0 max-h-[648px] w-[75vw] sm:-right-[10vw] sm:w-[60vw] xl:-right-[5vw] xl:h-[70%] xl:w-auto"
+            className="absolute -right-[20vw] bottom-0 max-h-[648px] w-[75vw] -translate-y-14 sm:-right-[10vw] sm:w-[60vw] xl:-right-[5vw] xl:h-[70%] xl:w-auto"
             src="/levy-and-vutera.png"
           />
         </div>
@@ -83,7 +83,7 @@ export default function HomeHero({ title, subtitle, buttons, media }) {
         </svg>
       </div>
 
-      <div className="relative z-1">
+      <div className="relative z-10">
         <svg
           className="w-full fill-current text-white"
           viewBox="0 0 1000 100"
