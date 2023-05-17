@@ -1,36 +1,36 @@
 export default function MeetOurStaff() {
   return (
-    <div class="bg-white py-32">
-      <div class="mx-auto max-w-7xl px-6 text-center lg:px-8">
-        <div class="mx-auto max-w-2xl">
-          <h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+    <div className="bg-white py-32">
+      <div className="mx-auto max-w-7xl px-6 text-center lg:px-8">
+        <div className="mx-auto max-w-2xl">
+          <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
             Meet our team
           </h2>
-          <p class="mt-4 text-lg leading-8 text-gray-600">
+          <p className="mt-4 text-lg leading-8 text-gray-600">
             We’re a dynamic group of individuals who are passionate about what
             we do.
           </p>
         </div>
         <ul
           role="list"
-          class="mx-auto mt-20 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:grid-cols-2 lg:mx-0 lg:max-w-none lg:grid-cols-3"
+          className="mx-auto mt-20 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:grid-cols-2 lg:mx-0 lg:max-w-none lg:grid-cols-3"
         >
           <li>
             <img
-              class="mx-auto h-56 w-56 rounded-full"
+              className="mx-auto h-56 w-56 rounded-full"
               src="https://images.unsplash.com/photo-1517365830460-955ce3ccd263?ixlib=rb-=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80"
               alt=""
             />
-            <h3 class="mt-6 text-base font-semibold leading-7 tracking-tight text-gray-900">
+            <h3 className="mt-6 text-base font-semibold leading-7 tracking-tight text-gray-900">
               Whitney Francis
             </h3>
-            <p class="text-sm leading-6 text-gray-600">Copywriter</p>
-            <ul role="list" class="mt-6 flex justify-center gap-x-6">
+            <p className="text-sm leading-6 text-gray-600">Copywriter</p>
+            <ul role="list" className="mt-6 flex justify-center gap-x-6">
               <li>
-                <a href="#" class="text-gray-400 hover:text-gray-500">
-                  <span class="sr-only">Twitter</span>
+                <a href="#" className="text-gray-400 hover:text-gray-500">
+                  <span className="sr-only">Twitter</span>
                   <svg
-                    class="h-5 w-5"
+                    className="h-5 w-5"
                     fill="currentColor"
                     viewBox="0 0 20 20"
                     aria-hidden="true"
@@ -40,10 +40,10 @@ export default function MeetOurStaff() {
                 </a>
               </li>
               <li>
-                <a href="#" class="text-gray-400 hover:text-gray-500">
-                  <span class="sr-only">LinkedIn</span>
+                <a href="#" className="text-gray-400 hover:text-gray-500">
+                  <span className="sr-only">LinkedIn</span>
                   <svg
-                    class="h-5 w-5"
+                    className="h-5 w-5"
                     fill="currentColor"
                     viewBox="0 0 20 20"
                     aria-hidden="true"
@@ -60,20 +60,20 @@ export default function MeetOurStaff() {
           </li>
           <li>
             <img
-              class="mx-auto h-56 w-56 rounded-full"
+              className="mx-auto h-56 w-56 rounded-full"
               src="https://images.unsplash.com/photo-1517365830460-955ce3ccd263?ixlib=rb-=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80"
               alt=""
             />
-            <h3 class="mt-6 text-base font-semibold leading-7 tracking-tight text-gray-900">
+            <h3 className="mt-6 text-base font-semibold leading-7 tracking-tight text-gray-900">
               Whitney Francis
             </h3>
-            <p class="text-sm leading-6 text-gray-600">Copywriter</p>
-            <ul role="list" class="mt-6 flex justify-center gap-x-6">
+            <p className="text-sm leading-6 text-gray-600">Copywriter</p>
+            <ul role="list" className="mt-6 flex justify-center gap-x-6">
               <li>
-                <a href="#" class="text-gray-400 hover:text-gray-500">
-                  <span class="sr-only">Twitter</span>
+                <a href="#" className="text-gray-400 hover:text-gray-500">
+                  <span className="sr-only">Twitter</span>
                   <svg
-                    class="h-5 w-5"
+                    className="h-5 w-5"
                     fill="currentColor"
                     viewBox="0 0 20 20"
                     aria-hidden="true"
@@ -83,10 +83,10 @@ export default function MeetOurStaff() {
                 </a>
               </li>
               <li>
-                <a href="#" class="text-gray-400 hover:text-gray-500">
-                  <span class="sr-only">LinkedIn</span>
+                <a href="#" className="text-gray-400 hover:text-gray-500">
+                  <span className="sr-only">LinkedIn</span>
                   <svg
-                    class="h-5 w-5"
+                    className="h-5 w-5"
                     fill="currentColor"
                     viewBox="0 0 20 20"
                     aria-hidden="true"
@@ -103,20 +103,20 @@ export default function MeetOurStaff() {
           </li>
           <li>
             <img
-              class="mx-auto h-56 w-56 rounded-full"
+              className="mx-auto h-56 w-56 rounded-full"
               src="https://images.unsplash.com/photo-1517365830460-955ce3ccd263?ixlib=rb-=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80"
               alt=""
             />
-            <h3 class="mt-6 text-base font-semibold leading-7 tracking-tight text-gray-900">
+            <h3 className="mt-6 text-base font-semibold leading-7 tracking-tight text-gray-900">
               Whitney Francis
             </h3>
-            <p class="text-sm leading-6 text-gray-600">Copywriter</p>
-            <ul role="list" class="mt-6 flex justify-center gap-x-6">
+            <p className="text-sm leading-6 text-gray-600">Copywriter</p>
+            <ul role="list" className="mt-6 flex justify-center gap-x-6">
               <li>
-                <a href="#" class="text-gray-400 hover:text-gray-500">
-                  <span class="sr-only">Twitter</span>
+                <a href="#" className="text-gray-400 hover:text-gray-500">
+                  <span className="sr-only">Twitter</span>
                   <svg
-                    class="h-5 w-5"
+                    className="h-5 w-5"
                     fill="currentColor"
                     viewBox="0 0 20 20"
                     aria-hidden="true"
@@ -126,10 +126,10 @@ export default function MeetOurStaff() {
                 </a>
               </li>
               <li>
-                <a href="#" class="text-gray-400 hover:text-gray-500">
-                  <span class="sr-only">LinkedIn</span>
+                <a href="#" className="text-gray-400 hover:text-gray-500">
+                  <span className="sr-only">LinkedIn</span>
                   <svg
-                    class="h-5 w-5"
+                    className="h-5 w-5"
                     fill="currentColor"
                     viewBox="0 0 20 20"
                     aria-hidden="true"
@@ -146,20 +146,20 @@ export default function MeetOurStaff() {
           </li>
           <li>
             <img
-              class="mx-auto h-56 w-56 rounded-full"
+              className="mx-auto h-56 w-56 rounded-full"
               src="https://images.unsplash.com/photo-1517365830460-955ce3ccd263?ixlib=rb-=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80"
               alt=""
             />
-            <h3 class="mt-6 text-base font-semibold leading-7 tracking-tight text-gray-900">
+            <h3 className="mt-6 text-base font-semibold leading-7 tracking-tight text-gray-900">
               Whitney Francis
             </h3>
-            <p class="text-sm leading-6 text-gray-600">Copywriter</p>
-            <ul role="list" class="mt-6 flex justify-center gap-x-6">
+            <p className="text-sm leading-6 text-gray-600">Copywriter</p>
+            <ul role="list" className="mt-6 flex justify-center gap-x-6">
               <li>
-                <a href="#" class="text-gray-400 hover:text-gray-500">
-                  <span class="sr-only">Twitter</span>
+                <a href="#" className="text-gray-400 hover:text-gray-500">
+                  <span className="sr-only">Twitter</span>
                   <svg
-                    class="h-5 w-5"
+                    className="h-5 w-5"
                     fill="currentColor"
                     viewBox="0 0 20 20"
                     aria-hidden="true"
@@ -169,10 +169,10 @@ export default function MeetOurStaff() {
                 </a>
               </li>
               <li>
-                <a href="#" class="text-gray-400 hover:text-gray-500">
-                  <span class="sr-only">LinkedIn</span>
+                <a href="#" className="text-gray-400 hover:text-gray-500">
+                  <span className="sr-only">LinkedIn</span>
                   <svg
-                    class="h-5 w-5"
+                    className="h-5 w-5"
                     fill="currentColor"
                     viewBox="0 0 20 20"
                     aria-hidden="true"
@@ -189,20 +189,20 @@ export default function MeetOurStaff() {
           </li>
           <li>
             <img
-              class="mx-auto h-56 w-56 rounded-full"
+              className="mx-auto h-56 w-56 rounded-full"
               src="https://images.unsplash.com/photo-1517365830460-955ce3ccd263?ixlib=rb-=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80"
               alt=""
             />
-            <h3 class="mt-6 text-base font-semibold leading-7 tracking-tight text-gray-900">
+            <h3 className="mt-6 text-base font-semibold leading-7 tracking-tight text-gray-900">
               Whitney Francis
             </h3>
-            <p class="text-sm leading-6 text-gray-600">Copywriter</p>
-            <ul role="list" class="mt-6 flex justify-center gap-x-6">
+            <p className="text-sm leading-6 text-gray-600">Copywriter</p>
+            <ul role="list" className="mt-6 flex justify-center gap-x-6">
               <li>
-                <a href="#" class="text-gray-400 hover:text-gray-500">
-                  <span class="sr-only">Twitter</span>
+                <a href="#" className="text-gray-400 hover:text-gray-500">
+                  <span className="sr-only">Twitter</span>
                   <svg
-                    class="h-5 w-5"
+                    className="h-5 w-5"
                     fill="currentColor"
                     viewBox="0 0 20 20"
                     aria-hidden="true"
@@ -212,10 +212,10 @@ export default function MeetOurStaff() {
                 </a>
               </li>
               <li>
-                <a href="#" class="text-gray-400 hover:text-gray-500">
-                  <span class="sr-only">LinkedIn</span>
+                <a href="#" className="text-gray-400 hover:text-gray-500">
+                  <span className="sr-only">LinkedIn</span>
                   <svg
-                    class="h-5 w-5"
+                    className="h-5 w-5"
                     fill="currentColor"
                     viewBox="0 0 20 20"
                     aria-hidden="true"
@@ -232,20 +232,20 @@ export default function MeetOurStaff() {
           </li>
           <li>
             <img
-              class="mx-auto h-56 w-56 rounded-full"
+              className="mx-auto h-56 w-56 rounded-full"
               src="https://images.unsplash.com/photo-1517365830460-955ce3ccd263?ixlib=rb-=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80"
               alt=""
             />
-            <h3 class="mt-6 text-base font-semibold leading-7 tracking-tight text-gray-900">
+            <h3 className="mt-6 text-base font-semibold leading-7 tracking-tight text-gray-900">
               Whitney Francis
             </h3>
-            <p class="text-sm leading-6 text-gray-600">Copywriter</p>
-            <ul role="list" class="mt-6 flex justify-center gap-x-6">
+            <p className="text-sm leading-6 text-gray-600">Copywriter</p>
+            <ul role="list" className="mt-6 flex justify-center gap-x-6">
               <li>
-                <a href="#" class="text-gray-400 hover:text-gray-500">
-                  <span class="sr-only">Twitter</span>
+                <a href="#" className="text-gray-400 hover:text-gray-500">
+                  <span className="sr-only">Twitter</span>
                   <svg
-                    class="h-5 w-5"
+                    className="h-5 w-5"
                     fill="currentColor"
                     viewBox="0 0 20 20"
                     aria-hidden="true"
@@ -255,10 +255,10 @@ export default function MeetOurStaff() {
                 </a>
               </li>
               <li>
-                <a href="#" class="text-gray-400 hover:text-gray-500">
-                  <span class="sr-only">LinkedIn</span>
+                <a href="#" className="text-gray-400 hover:text-gray-500">
+                  <span className="sr-only">LinkedIn</span>
                   <svg
-                    class="h-5 w-5"
+                    className="h-5 w-5"
                     fill="currentColor"
                     viewBox="0 0 20 20"
                     aria-hidden="true"
