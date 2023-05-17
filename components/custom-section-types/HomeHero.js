@@ -1,5 +1,6 @@
 import Button from "../Button";
 import Media from "../Media";
+import Image from "next/image";
 
 export default function HomeHero({ title, subtitle, buttons, media }) {
   return (
@@ -13,15 +14,14 @@ export default function HomeHero({ title, subtitle, buttons, media }) {
 
       <div class="absolute inset-0 z-10">
         <div class="relative h-full w-full xl:container xl:max-w-screen-2xl">
-          <img
+          <Image
             alt=""
-            width="3000"
-            height="2453"
+            width="1097"
+            height="691"
             decoding="async"
             data-nimg="1"
-            class="absolute -right-[20vw] bottom-0 max-h-[648px] w-[75vw] sm:-right-[10vw] sm:w-[60vw] xl:-right-[5vw] xl:h-[95%] xl:w-auto"
-            srcset="/_next/image?url=https%3A%2F%2Fimages.ctfassets.net%2F5a65o1927eh3%2FMBuRVTWjLFDFpHWkRG5lb%2F36133974a13a55913ba00568239f258e%2FHero_Image.webp&amp;w=3840&amp;q=75 1x"
-            src="/_next/image?url=https%3A%2F%2Fimages.ctfassets.net%2F5a65o1927eh3%2FMBuRVTWjLFDFpHWkRG5lb%2F36133974a13a55913ba00568239f258e%2FHero_Image.webp&amp;w=3840&amp;q=75"
+            className="absolute -translate-y-14 -right-[20vw] bottom-0 max-h-[648px] w-[75vw] sm:-right-[10vw] sm:w-[60vw] xl:-right-[5vw] xl:h-[70%] xl:w-auto"
+            src="/levy-and-vutera.png"
           />
         </div>
       </div>
