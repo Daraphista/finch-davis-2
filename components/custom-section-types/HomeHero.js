@@ -12,8 +12,8 @@ export default function HomeHero({ title, subtitle, buttons, media }) {
       <div className="pointer-events-none absolute inset-0 overflow-hidden"></div>
 
       {media && /(image)/.test(media?.fields?.file?.contentType) && (
-        <div class="absolute inset-0 z-10">
-          <div class="relative h-full w-full xl:container xl:max-w-screen-2xl">
+        <div className="absolute inset-0 z-10">
+          <div className="relative h-full w-full xl:container xl:max-w-screen-2xl">
             <Image
               alt=""
               src={`https:${media?.fields?.file?.url}`}
