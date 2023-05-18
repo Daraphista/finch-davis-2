@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export default function HomeHero({ title, subtitle, buttons, media }) {
   return (
-    <section className="relative overflow-hidden bg-primary-400 md:bg-red-500 lg:bg-green-500">
+    <section className="relative overflow-hidden bg-primary-400">
       <div className="pattern-primary-light absolute inset-0 xl:bg-fixed"></div>
       <div className="absolute inset-0 bg-gradient-to-br from-white from-30%"></div>
 
@@ -11,7 +11,7 @@ export default function HomeHero({ title, subtitle, buttons, media }) {
 
       <div className="pointer-events-none absolute inset-0 overflow-hidden"></div>
 
-      <div className="container relative z-10 max-w-screen-2xl pt-12 md:pt-16 md:pb-56 lg:py-20 xl:py-28 2xl:pt-32">
+      <div className="container relative z-10 max-w-screen-2xl pt-12 md:pb-56 md:pt-16 lg:py-20 xl:py-28 2xl:pt-32">
         <div className="grid items-center gap-8 lg:grid-cols-2 lg:gap-16">
           <div className="">
             {title && (
