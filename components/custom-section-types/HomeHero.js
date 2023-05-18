@@ -19,7 +19,7 @@ export default function HomeHero({ title, subtitle, buttons, media }) {
               src={`https:${media?.fields?.file?.url}`}
               height={media?.fields?.file?.details?.image?.height}
               width={media?.fields?.file?.details?.image?.width}
-              className="absolute -right-[20vw] bottom-0 max-h-[648px] w-[75vw] -translate-y-14 sm:-right-[10vw] sm:w-[60vw] xl:-right-[5vw] xl:h-[70%] xl:w-auto"
+              className="absolute -right-[20vw] bottom-0 max-h-[648px] w-[75vw] sm:-right-[10vw] sm:w-[60vw] md:-translate-y-8 lg:-translate-y-11 xl:-right-[5vw] xl:h-[70%] xl:w-auto"
             />
           </div>
         </div>
