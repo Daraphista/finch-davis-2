@@ -44,13 +44,13 @@ export default function HomeHero({ title, subtitle, buttons, media }) {
 
       {media && /(image)/.test(media?.fields?.file?.contentType) && (
         <div className="z-10 md:absolute md:inset-0">
-          <div className="relative flex h-full w-full justify-center md:block xl:container xl:max-w-screen-2xl">
+          <div className="relative flex h-full w-full justify-center xl:container md:block xl:max-w-screen-2xl">
             <Image
               alt=""
               src={`https:${media?.fields?.file?.url}`}
               height={media?.fields?.file?.details?.image?.height}
               width={media?.fields?.file?.details?.image?.width}
-              className="relative bottom-0 z-10 max-h-[648px] w-[75vw] sm:w-[60vw] md:absolute md:-right-[5vw] md:-translate-y-8 lg:-translate-y-11 xl:h-[70%] xl:w-auto"
+              className="relative bottom-0 z-10 w-full md:absolute md:-right-[5vw] md:max-h-[648px] md:w-[60vw] md:-translate-y-8 lg:-translate-y-11 xl:h-[70%] xl:w-auto"
             />
           </div>
         </div>
@@ -83,7 +83,7 @@ export default function HomeHero({ title, subtitle, buttons, media }) {
         </svg>
       </div>
 
-      <div className="relative z-10">
+      <div className="absolute bottom-0 z-10 w-full md:relative">
         <svg
           className="w-full fill-current text-white"
           viewBox="0 0 1000 100"
