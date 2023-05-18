@@ -13,9 +13,9 @@ module.exports = {
     // fonts need to be imported in the CSS tab
     fontFamily: {
       // default/main body font
-      sans: ['Plus Jakarta Sans', 'sans-serif'],
+      sans: ["Plus Jakarta Sans", "sans-serif"],
       // heading font for hero titles, section titles, and RTE (Rich Text Editor) elements
-      heading: ['Hepta Slab', 'sans-serif'],
+      heading: ["Hepta Slab", "sans-serif"],
     },
     extend: {
       colors: {
@@ -200,6 +200,9 @@ module.exports = {
           },
         },
       }),
+    },
+    cursor: {
+      pointer: "url('../public/custom-pointer.svg'), pointer",
     },
   },
   plugins: [
