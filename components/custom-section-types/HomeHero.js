@@ -34,7 +34,7 @@ export default function HomeHero({ title, subtitle, buttons, media }) {
               </h1>
             )}
             {subtitle && (
-              <h2 className="mt-3 font-heading text-4xl font-normal text-primary-950 md:text-5xl xl:text-6xl">
+              <h2 className="mt-3 font-heading text-4xl font-normal text-primary-950 md:max-w-[80vw] md:text-5xl xl:text-6xl">
                 {subtitle}
               </h2>
             )}
