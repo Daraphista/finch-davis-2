@@ -11,9 +11,9 @@ export default function Instagram(title, subtitle) {
             </h2>
           )}
           {subtitle && (
-            <h2 className="mt-1 font-heading text-2xl font-normal text-gray-900 md:text-3xl xl:text-4xl">
+            <h3 className="mt-1 font-heading text-2xl font-normal text-gray-900 md:text-3xl xl:text-4xl">
               {subtitle}
-            </h2>
+            </h3>
           )}
         </div>
 
