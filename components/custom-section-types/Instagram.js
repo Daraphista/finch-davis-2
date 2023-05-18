@@ -1,6 +1,6 @@
 import Script from "next/script";
 
-export default function Instagram(title, subtitle) {
+export default function Instagram({ title, subtitle }) {
   return (
     <section>
       <div className="container max-w-screen-xl py-12 text-center md:py-16 lg:py-20">
