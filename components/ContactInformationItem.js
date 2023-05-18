@@ -16,7 +16,7 @@ export default function ContactInformationItem({ title, body, url }) {
           {documentToReactComponents(body, options)}
         </Link>
       ) : (
-        <div className="mt-3 text-lg text-gray-300">
+        <div className="mt-3 flex md:block justify-center text-lg text-gray-300">
           {documentToReactComponents(body, options)}
         </div>
       )}
