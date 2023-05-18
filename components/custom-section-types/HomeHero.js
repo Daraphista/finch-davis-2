@@ -11,7 +11,7 @@ export default function HomeHero({ title, subtitle, buttons, media }) {
 
       <div className="pointer-events-none absolute inset-0 overflow-hidden"></div>
 
-      <div className="container relative z-10 max-w-screen-2xl py-12 md:py-16 md:pb-56 lg:py-20 xl:py-28 2xl:pt-32">
+      <div className="container relative z-10 max-w-screen-2xl pt-12 md:pt-16 md:pb-56 lg:py-20 xl:py-28 2xl:pt-32">
         <div className="grid items-center gap-8 lg:grid-cols-2 lg:gap-16">
           <div className="">
             {title && (
