@@ -87,7 +87,7 @@ export default function WhyChooseUs({
             </div>
           </div>
           <div className="sm:px-6 lg:px-0">
-            <figure className="aspect-h-9 aspect-w-16 overflow-hidden rounded-sm lg:aspect-h-3 lg:aspect-w-4">
+            <figure className="overflow-hidden rounded-sm lg:aspect-h-3 lg:aspect-w-4">
               <Media media={media} />
             </figure>
           </div>
