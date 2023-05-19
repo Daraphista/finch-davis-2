@@ -21,8 +21,7 @@ export default function NestedLink({ navLink, isScrolling }) {
     >
       <>
         <Popover.Button>
-          <Link
-            href={`/${navLink?.fields?.slug}`}
+          <p
             className={`relative flex items-center text-base font-semibold uppercase tracking-wider text-primary-800 hover:text-black`}
           >
             <span>{navLink?.fields?.title}</span>
@@ -39,7 +38,7 @@ export default function NestedLink({ navLink, isScrolling }) {
                 clipRule="evenodd"
               ></path>
             </svg>
-          </Link>
+          </p>
         </Popover.Button>
         <Transition
           show={open}
