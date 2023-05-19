@@ -1,13 +1,14 @@
 "use client";
 
 import { Fragment, useEffect, useState } from "react";
-import { Popover, Transition } from "@headlessui/react";
+import { Disclosure, Popover, Transition } from "@headlessui/react";
 import { getHeaderData } from "../lib/api";
 import Image from "next/image";
 import Link from "next/link";
 import Button from "./Button";
 import NestedLink from "./NestedLink";
 import { forwardRef } from "react";
+import { motion } from "framer-motion";
 
 const MyLink = forwardRef((props, ref) => {
   let { href, children, ...rest } = props;
@@ -334,23 +335,66 @@ const MobileMenuLinks = ({ navigationLinks, close }) => {
   return (
     navigationLinks && (
       <div className="grid gap-4 text-center">
-        {navigationLinks?.map((navigationLink) => {
-          if (!navigationLink?.fields?.childPages) {
-            return (
-              <MyLink
-                onClick={() => {
-                  close();
-                }}
-                href={`/${navigationLink?.fields?.slug}`}
-                key={`${navigationLink?.fields?.slug}`}
-                target="_self"
-                className="text-base font-medium text-gray-900 hover:text-gray-700"
-              >
-                {navigationLink?.fields?.title}
-              </MyLink>
-            );
-          }
-        })}
+        {navigationLinks?.map((navigationLink) =>
+          navigationLink?.fields?.childPages ? (
+            <Disclosure as="div">
+              {({ open }) => (
+                <>
+                  <Disclosure.Button className="text-secondary hover:text-secondary-700 flex w-full items-center justify-center text-base font-medium">
+                    <span>{navigationLink?.fields?.title}</span>
+                    <svg
+                      className="group-hover:text-header-caret-hover-color text-header-caret-color fill-secondary ml-2 h-5 w-5 transition-transform group-hover:rotate-180"
+                      x-description="Heroicon name: solid/chevron-down"
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 20 20"
+                      aria-hidden="true"
+                    >
+                      <motion.path
+                        initial={{ rotate: 0 }}
+                        animate={{ rotate: open ? 180 : 0 }}
+                        transition={{ duration: 0.2 }}
+                        fill-rule="evenodd"
+                        d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                        clip-rule="evenodd"
+                      ></motion.path>
+                    </svg>
+                  </Disclosure.Button>
+                  <Disclosure.Panel>
+                    <nav className="mt-1 grid grid-cols-1 gap-2">
+                      {navigationLink?.fields?.childPages?.map((childPage) => (
+                        <MyLink
+                          onClick={() => {
+                            close();
+                          }}
+                          href={`/${childPage?.fields?.slug}`}
+                          target="_self"
+                          key={childPage?.fields?.slug}
+                          className="flex items-center justify-center rounded-lg py-1 text-sm text-gray-600 hover:bg-gray-50"
+                        >
+                          <div className="text-theme-title font-medium">
+                            {childPage?.fields?.title}
+                          </div>
+                        </MyLink>
+                      ))}
+                    </nav>
+                  </Disclosure.Panel>
+                </>
+              )}
+            </Disclosure>
+          ) : (
+            <MyLink
+              onClick={() => {
+                close();
+              }}
+              href={`/${navigationLink?.fields?.slug}`}
+              key={`${navigationLink?.fields?.slug}`}
+              target="_self"
+              className="text-base font-medium text-gray-900 hover:text-gray-700"
+            >
+              {navigationLink?.fields?.title}
+            </MyLink>
+          )
+        )}
       </div>
     )
   );
