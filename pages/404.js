@@ -1,12 +1,13 @@
 import Link from "next/link";
-import { getHeaderData, getMetaData } from "@/lib/api";
+import { getHeaderData, getMetaData, getFooterData } from "@/lib/api";
 import "../styles/globals.css";
 import "../styles/blend.css";
 import "../styles/colors.css";
 import "../styles/header.css";
 import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 
-export default function Error({ headerData, metaData }) {
+export default function Error({ headerData, metaData, footerData }) {
   return (
     <>
       {/* Temporary banner so that the header can be seen */}
@@ -38,6 +39,8 @@ export default function Error({ headerData, metaData }) {
           </div>
         </section>
       </main>
+
+      <Footer data={footerData} />
     </>
   );
 }
@@ -45,11 +48,13 @@ export default function Error({ headerData, metaData }) {
 export async function getStaticProps() {
   const headerData = await getHeaderData();
   const metaData = await getMetaData();
+  const footerData = await getFooterData();
 
   return {
     props: {
       headerData,
       metaData,
+      footerData,
     },
   };
 }
