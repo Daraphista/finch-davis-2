@@ -1,15 +1,18 @@
 import Link from "next/link";
-import { getHeaderData } from "@/lib/api";
+import { getHeaderData, getMetaData } from "@/lib/api";
 import "../styles/globals.css";
 import "../styles/blend.css";
 import "../styles/colors.css";
 import "../styles/header.css";
+import Header from "@/components/Header";
 
 export default function Error({ headerData, metaData }) {
   return (
     <>
       {/* Temporary banner so that the header can be seen */}
       <div className="h-[95px] bg-gray-900"></div>
+
+      <Header data={headerData} metaData={metaData} />
 
       <main>
         <section className="relative bg-transparent">
