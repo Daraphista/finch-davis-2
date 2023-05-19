@@ -58,7 +58,7 @@ export default function Header({ data, metaData }) {
             />
 
             <div className="-my-2 -mr-2 xl:hidden">
-              <Popover.Button className="inline-flex items-center justify-center rounded-md p-2 text-primary-300 hover:bg-primary-500 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-primary-500">
+              <Popover.Button className="inline-flex items-center justify-center rounded-md p-2 text-primary-600 hover:bg-primary-500 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-primary-600">
                 <span className="sr-only">Open menu</span>
                 {/* Menu Bars Icon */}
                 <svg
