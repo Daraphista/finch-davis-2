@@ -67,6 +67,32 @@ export default function NestedLink({ navLink, isScrolling }) {
                 </svg>
               </span>
               <div className="relative grid">
+                {!navLink?.fields?.isSubnavParent && (
+                  <Link
+                    href={`/${navLink?.fields?.slug}`}
+                    className="group/child-nav flex items-center border-b border-gray-200 border-opacity-50 px-5 pb-4 pt-6 hover:bg-gray-50"
+                  >
+                    <div className="ml-3 flex items-center gap-3 transition-all">
+                      <p className="text-theme-title group-hover/child-nav:text-secondary-950 font-heading text-sm font-semibold tracking-wide 2xl:text-base">
+                        {navLink?.fields?.title} Overview
+                      </p>
+                      <svg
+                        className="fill-gray-400 transition-transform group-hover/child-nav:translate-x-2 group-hover/child-nav:fill-primary-500"
+                        aria-hidden="true"
+                        focusable="false"
+                        data-prefix="fas"
+                        data-icon="long-arrow-right"
+                        role="img"
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 512 512"
+                        data-fa-i2svg=""
+                        height="12"
+                      >
+                        <path d="M502.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-128-128c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L402.7 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l370.7 0-73.4 73.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l128-128z"></path>
+                      </svg>
+                    </div>
+                  </Link>
+                )}
                 {navLink &&
                   navLink?.fields?.childPages?.map((navLinkButton) => (
                     <Link
