@@ -1,5 +1,9 @@
 import Link from "next/link";
 import { getHeaderData } from "@/lib/api";
+import "../styles/globals.css";
+import "../styles/blend.css";
+import "../styles/colors.css";
+import "../styles/header.css";
 
 export default function Error({ headerData, metaData }) {
   return (
