@@ -9,6 +9,7 @@ import Button from "./Button";
 import NestedLink from "./NestedLink";
 import { forwardRef } from "react";
 import { motion } from "framer-motion";
+import uniqid from "uniqid";
 
 const MyLink = forwardRef((props, ref) => {
   let { href, children, ...rest } = props;
@@ -298,7 +299,7 @@ const MobileMenuLinks = ({ navigationLinks, close }) => {
       <div className="grid gap-4 text-center">
         {navigationLinks?.map((navigationLink) =>
           navigationLink?.fields?.childPages ? (
-            <Disclosure as="div">
+            <Disclosure as="div" key={`${uniqid()}`}>
               {({ open }) => (
                 <>
                   <Disclosure.Button className="text-secondary hover:text-secondary-700 flex w-full items-center justify-center text-base font-medium">
