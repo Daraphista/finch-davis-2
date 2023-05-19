@@ -11,7 +11,7 @@ export default function Error({ headerData, metaData, footerData }) {
   return (
     <>
       {/* Temporary banner so that the header can be seen */}
-      <div className="h-[95px] bg-gray-900"></div>
+      <div className="h-[130px] bg-white"></div>
 
       <Header data={headerData} metaData={metaData} />
 
