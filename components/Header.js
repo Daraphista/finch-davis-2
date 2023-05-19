@@ -126,11 +126,6 @@ export default function Header({ data, metaData }) {
                     </Popover.Button>
                   </div>
                 </div>
-
-                <MobileMenuLinksNested
-                  navigationLinks={data?.navigationLinks}
-                  close={close}
-                />
               </div>
 
               <div className="px-5 py-6">
@@ -294,40 +289,6 @@ const MobileMenuLogo = ({ logo, metaData }) => {
         </span>
       </Link>
     )
-  );
-};
-
-const MobileMenuLinksNested = ({ navigationLinks, close }) => {
-  return (
-    navigationLinks &&
-    navigationLinks?.map((navigationLink) => {
-      if (navigationLink?.fields?.childPages) {
-        return (
-          <div className="mt-6" key={navigationLink?.fields?.title}>
-            <p className="font-bold uppercase tracking-wide text-gray-500">
-              {navigationLink?.fields?.title}
-            </p>
-            <nav className="mt-1 grid grid-cols-1 gap-2">
-              {navigationLink?.fields?.childPages?.map((childPage) => (
-                <MyLink
-                  onClick={() => {
-                    close();
-                  }}
-                  href={`/${childPage?.fields?.slug}`}
-                  target="_self"
-                  key={childPage?.fields?.slug}
-                  className="flex items-center rounded-lg py-1 text-gray-900 hover:bg-gray-50"
-                >
-                  <div className="text-theme-title text-base font-medium">
-                    {childPage?.fields?.title}
-                  </div>
-                </MyLink>
-              ))}
-            </nav>
-          </div>
-        );
-      }
-    })
   );
 };
 
