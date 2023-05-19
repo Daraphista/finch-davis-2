@@ -44,7 +44,7 @@ export default function Header({ data, metaData }) {
         <div className="flex items-center justify-between py-6 lg:justify-start lg:space-x-10">
           <Logo data={data} metaData={metaData} isScrolling={isScrolling} />
 
-          <div className="flex items-end justify-end xl:flex-col">
+          <div className="flex items-center justify-end xl:flex-col">
             {/* Call to Action Buttons */}
             <CallToActionButtons
               callToAction={data?.callToAction}
