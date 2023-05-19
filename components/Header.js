@@ -364,7 +364,7 @@ const MobileMenuLinks = ({ navigationLinks, close }) => {
 const MobileMenuCallToActions = ({ callToAction, close }) => {
   return (
     callToAction && (
-      <div className="mt-6">
+      <div className="mt-6 space-y-3">
         {callToAction?.map((ctaBtn) => {
           if (ctaBtn?.fields?.text) {
             return (
