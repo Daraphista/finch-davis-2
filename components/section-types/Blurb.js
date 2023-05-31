@@ -4,7 +4,7 @@ import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
 
 const options = {
   renderNode: {
-    [BLOCKS.PARAGRAPH]: (node, children) => <p class="flex-auto">{children}</p>,
+    [BLOCKS.PARAGRAPH]: (node, children) => <p className="flex-auto">{children}</p>,
   },
 };
 
@@ -34,14 +34,14 @@ export default function Blurb({
         {body && <div className="prose mx-auto mt-6 xl:prose-lg">{body}</div>}
 
         {customContentCollection && (
-          <div class="mx-auto mt-12 max-w-2xl lg:max-w-none">
-            <dl class="grid max-w-xl grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none lg:grid-cols-3">
+          <div className="mx-auto mt-12 max-w-2xl lg:max-w-none">
+            <dl className="grid max-w-xl grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none lg:grid-cols-3">
               {customContentCollection?.map((customContentItem) => (
-                <div class="flex flex-col">
-                  <dt class="text-lg font-semibold leading-7 text-gray-900">
+                <div className="flex flex-col">
+                  <dt className="text-lg font-semibold leading-7 text-gray-900">
                     {customContentItem?.fields?.title}
                   </dt>
-                  <dd class="mt-1 flex flex-auto flex-col text-base leading-7 text-gray-600">
+                  <dd className="mt-1 flex flex-auto flex-col text-base leading-7 text-gray-600">
                     {documentToReactComponents(
                       customContentItem?.fields?.body,
                       options
