@@ -8,3 +8,4 @@ export { default as ImageRightDetachedTitle } from "./ImageRightDetachedTitle";
 export { default as ImageRightSmall } from "./ImageRightSmall";
 export { default as ImageLeftSmall } from "./ImageLeftSmall";
 export { default as ImageLeft } from "./ImageLeft";
+export { default as Blurb } from "./Blurb";
