@@ -12,7 +12,7 @@ export default function Default({
 }) {
   return (
     <section id={id} className="relative bg-transparent text-lg">
-      <div className="relative z-1 mx-auto w-full max-w-screen-lg px-4 pb-6 pt-12 text-center md:pb-6 md:pt-12 lg:pb-8 lg:pt-16 xl:pb-10 xl:pt-20">
+      <div className="relative z-1 mx-auto w-full max-w-screen-lg px-4 pb-6 pt-12 md:pb-6 md:pt-12 lg:pb-8 lg:pt-16 xl:pb-10 xl:pt-20">
         {title && (
           <h2 className="text-theme-title font-heading text-2xl font-extrabold md:text-3xl xl:text-4xl">
             {title}
