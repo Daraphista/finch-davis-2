@@ -1,5 +1,6 @@
 import Button from "../Button";
 import Media from "../Media";
+import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
 
 export default function ImageLeft({
   id,
@@ -19,7 +20,8 @@ export default function ImageLeft({
               <Media media={media} />
             </div>
           </div>
-          <div className="relative lg:col-start-2 lg:row-start-2">
+
+          <div className="relative">
             <div className="relative">
               {title && (
                 <h2 className="font-heading text-2xl font-semibold text-gray-900 md:text-3xl xl:text-4xl">
