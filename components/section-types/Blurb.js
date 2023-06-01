@@ -5,7 +5,9 @@ import uniqid from "uniqid";
 
 const options = {
   renderNode: {
-    [BLOCKS.PARAGRAPH]: (node, children) => <p className="flex-auto">{children}</p>,
+    [BLOCKS.PARAGRAPH]: (node, children) => (
+      <p className="flex-auto">{children}</p>
+    ),
   },
 };
 
