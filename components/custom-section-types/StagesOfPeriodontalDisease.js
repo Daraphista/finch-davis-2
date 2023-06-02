@@ -44,7 +44,10 @@ export default function StagesOfPeriodontalDisease({
         {customContentCollection && (
           <div className="mx-auto mt-16 max-w-2xl space-y-8 lg:max-w-none">
             {customContentCollection?.map((customContentItem) => (
-              <dl className="grid max-w-xl grid-cols-1 gap-x-12 gap-y-10 rounded-sm bg-primary-100 p-8 lg:max-w-none lg:grid-cols-3">
+              <dl
+                className="grid max-w-xl grid-cols-1 gap-x-12 gap-y-10 rounded-sm bg-primary-100 p-8 lg:max-w-none lg:grid-cols-3"
+                key={uniqid()}
+              >
                 <div className="relative">
                   <Media media={media} />
                 </div>
