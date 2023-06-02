@@ -20,7 +20,7 @@ export default function SingleTestimonial({ customContentCollection }) {
           <div className="relative max-w-xl border border-gray-200 bg-white p-8 shadow-xl">
             <Link
               className="flex items-start gap-5"
-              href={customContentCollection?.[0]?.fields?.url}
+              href={`${customContentCollection?.[0]?.fields?.url}`}
               target="blank"
             >
               <Image src={googleIcon} height={50} />
