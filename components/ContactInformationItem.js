@@ -10,13 +10,13 @@ export default function ContactInformationItem({ title, body, url }) {
       </p>
       {url ? (
         <Link
-          href={url}
+          href={`${url}`}
           className="group mt-3 block cursor-pointer text-lg text-gray-300"
         >
           {documentToReactComponents(body, options)}
         </Link>
       ) : (
-        <div className="mt-3 flex md:block justify-center text-lg text-gray-300">
+        <div className="mt-3 flex justify-center text-lg text-gray-300 md:block">
           {documentToReactComponents(body, options)}
         </div>
       )}
@@ -43,7 +43,7 @@ const options = {
       return (
         <span className="text-theme-body mt-1 text-base leading-tight">
           <Link
-            href={node?.data?.uri}
+            href={`${node?.data?.uri}`}
             target="_blank"
             className="hover:text-white hover:underline"
           >

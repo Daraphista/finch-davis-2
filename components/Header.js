@@ -14,7 +14,7 @@ import uniqid from "uniqid";
 const MyLink = forwardRef((props, ref) => {
   let { href, children, ...rest } = props;
   return (
-    <Link href={href} ref={ref} {...rest}>
+    <Link href={`${href}`} ref={ref} {...rest}>
       {children}
     </Link>
   );
