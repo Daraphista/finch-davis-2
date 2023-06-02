@@ -10,3 +10,4 @@ export { default as ImageLeftSmall } from "./ImageLeftSmall";
 export { default as ImageLeft } from "./ImageLeft";
 export { default as Blurb } from "./Blurb";
 export { default as Faqs } from "./Faqs";
+export { default as SingleTestimonial } from "./SingleTestimonial";
