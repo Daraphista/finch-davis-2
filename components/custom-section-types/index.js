@@ -7,3 +7,4 @@ export { default as WhatWeDo } from "./WhatWeDo";
 export { default as MeetOurDoctors } from "./MeetOurDoctors";
 export { default as MeetOurStaff } from "./MeetOurStaff";
 export { default as StagesOfPeriodontalDisease } from "./StagesOfPeriodontalDisease";
+export { default as AfterToothProcedure } from "./AfterToothProcedure";
