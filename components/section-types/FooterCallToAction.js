@@ -1,6 +1,10 @@
+"use client";
+
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
 import { BLOCKS } from "@contentful/rich-text-types";
 import uniqid from "uniqid";
+import { useEffect } from "react";
+import Link from "next/link";
 
 const options = {
   renderNode: {
@@ -16,6 +20,19 @@ export default function FooterCallToAction({
   unformattedBody,
   customContentCollection,
 }) {
+  const emailEmbeds = customContentCollection.filter(
+    (customContentItem) =>
+      customContentItem?.sys?.contentType?.sys?.id === "contactFormEmbed"
+  );
+
+  const embedScript = emailEmbeds?.[0]?.fields?.script;
+  const embedElement = emailEmbeds?.[0]?.fields?.element;
+  const embedHeading = emailEmbeds?.[0]?.fields?.heading;
+
+  useEffect(() => {
+    eval(embedScript);
+  });
+
   return (
     <div className="relative isolate mt-20 border-t border-primary-200 bg-white">
       <div className="mx-auto grid max-w-7xl grid-cols-1 lg:grid-cols-2">
@@ -59,108 +76,34 @@ export default function FooterCallToAction({
             )}
           </div>
         </div>
-        <form
-          action="#"
-          method="POST"
-          className="px-6 pb-24 pt-20 sm:pb-32 lg:px-8 lg:py-48"
-        >
-          <div className="mx-auto max-w-xl lg:mr-0 lg:max-w-lg">
-            <div className="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
-              <div>
-                <label
-                  htmlFor="first-name"
-                  className="block text-sm font-semibold leading-6 text-gray-900"
-                >
-                  First name
-                </label>
-                <div className="mt-2.5">
-                  <input
-                    type="text"
-                    name="first-name"
-                    id="first-name"
-                    autoComplete="given-name"
-                    className="block w-full rounded-sm border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-primary-600 sm:text-sm sm:leading-6"
-                  />
+        <div className="relative flex items-center mx-auto lg:mt-8 xl:mt-0">
+          <div className="relative">
+            <div className="relative z-1 mx-auto w-full overflow-hidden rounded bg-white lg:mr-0">
+              <div className="px-4 pt-6 sm:px-6">
+                <div className="min-h-[384px]">
+                  {embedScript && embedElement && (
+                    <div
+                      className="bg-white"
+                      dangerouslySetInnerHTML={{ __html: embedElement }}
+                    />
+                  )}
                 </div>
               </div>
-              <div>
-                <label
-                  htmlFor="last-name"
-                  className="block text-sm font-semibold leading-6 text-gray-900"
-                >
-                  Last name
-                </label>
-                <div className="mt-2.5">
-                  <input
-                    type="text"
-                    name="last-name"
-                    id="last-name"
-                    autoComplete="family-name"
-                    className="block w-full rounded-sm border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-primary-600 sm:text-sm sm:leading-6"
-                  />
-                </div>
+              <div className="px-4 py-6 text-center sm:px-10">
+                <p className="text-xs leading-5 text-gray-500">
+                  {" "}
+                  We care about protecting your data. Read our{" "}
+                  <Link
+                    href="/privacy-policy"
+                    className="font-bold text-gray-700 hover:underline"
+                  >
+                    Privacy Policy.
+                  </Link>
+                </p>
               </div>
-              <div className="sm:col-span-2">
-                <label
-                  htmlFor="email"
-                  className="block text-sm font-semibold leading-6 text-gray-900"
-                >
-                  Email
-                </label>
-                <div className="mt-2.5">
-                  <input
-                    type="email"
-                    name="email"
-                    id="email"
-                    autoComplete="email"
-                    className="block w-full rounded-sm border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-primary-600 sm:text-sm sm:leading-6"
-                  />
-                </div>
-              </div>
-              <div className="sm:col-span-2">
-                <label
-                  htmlFor="phone-number"
-                  className="block text-sm font-semibold leading-6 text-gray-900"
-                >
-                  Phone number
-                </label>
-                <div className="mt-2.5">
-                  <input
-                    type="tel"
-                    name="phone-number"
-                    id="phone-number"
-                    autoComplete="tel"
-                    className="block w-full rounded-sm border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-primary-600 sm:text-sm sm:leading-6"
-                  />
-                </div>
-              </div>
-              <div className="sm:col-span-2">
-                <label
-                  htmlFor="message"
-                  className="block text-sm font-semibold leading-6 text-gray-900"
-                >
-                  Message
-                </label>
-                <div className="mt-2.5">
-                  <textarea
-                    name="message"
-                    id="message"
-                    rows="4"
-                    className="block w-full rounded-sm border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-primary-600 sm:text-sm sm:leading-6"
-                  ></textarea>
-                </div>
-              </div>
-            </div>
-            <div className="mt-8 flex justify-end">
-              <button
-                type="submit"
-                className="rounded-sm bg-primary-600 px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-sm hover:bg-primary-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-600"
-              >
-                Send message
-              </button>
             </div>
           </div>
-        </form>
+        </div>
       </div>
       <div className="absolute bottom-0 left-0 right-0 z-1">
         <svg
