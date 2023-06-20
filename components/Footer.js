@@ -100,7 +100,7 @@ const FooterLogo = ({ footerLogo, metaData }) => {
   return (
     footerLogo && (
       <div className="">
-        <Link href="/" className="mx-auto block w-fit">
+        <a href="/" className="mx-auto block w-fit">
           <Image
             className="h-16 w-auto"
             src={`https:${footerLogo?.fields?.file?.url}`}
@@ -108,7 +108,7 @@ const FooterLogo = ({ footerLogo, metaData }) => {
             width={footerLogo?.fields?.file?.details?.image?.width}
             alt={`${metaData?.organizationName}`}
           />
-        </Link>
+        </a>
       </div>
     )
   );
