@@ -152,7 +152,7 @@ const Logo = ({ data, metaData }) => {
   return (
     data && (
       <div className="flex flex-1 justify-start">
-        <Link href="/" className="cursor-pointer">
+        <a href="/" className="cursor-pointer">
           <span className="sr-only">{metaData?.organizationName}</span>
           {/* Site Logo */}
           <div>
@@ -166,7 +166,7 @@ const Logo = ({ data, metaData }) => {
               />
             )}
           </div>
-        </Link>
+        </a>
       </div>
     )
   );
@@ -275,7 +275,7 @@ const CallToActionButtons = ({ callToAction, isScrolling }) => {
 const MobileMenuLogo = ({ logo, metaData }) => {
   return (
     logo && (
-      <Link href="/">
+      <a href="/">
         <span className="flex">
           <span className="sr-only">{metaData?.organizationName}</span>
           <div className="min-h-6 w-auto">
@@ -288,7 +288,7 @@ const MobileMenuLogo = ({ logo, metaData }) => {
             />
           </div>
         </span>
-      </Link>
+      </a>
     )
   );
 };
