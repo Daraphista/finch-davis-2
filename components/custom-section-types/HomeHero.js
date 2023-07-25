@@ -1,107 +1,78 @@
+import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
 import Button from "../Button";
-import Image from "next/image";
+import Media from "../Media";
+import { BLOCKS } from "@contentful/rich-text-types";
 
-export default function HomeHero({ title, subtitle, buttons, media }) {
+const options = {
+  renderNode: {
+    [BLOCKS.PARAGRAPH]: (node, children) => (
+      <p className="prose prose-lg prose-primary-invert mt-6 md:prose-xl">
+        {children}
+      </p>
+    ),
+  },
+};
+
+export default function HomeHero({ title, unformattedBody, media, buttons }) {
   return (
-    <section className="relative overflow-hidden bg-primary-400">
-      <div className="pattern-primary-light absolute inset-0 xl:bg-fixed"></div>
-      <div className="absolute inset-0 bg-gradient-to-br from-white from-30%"></div>
-
-      <div className="md:h-22 h-20 lg:h-24 xl:h-28"></div>
+    <section className="relative bg-primary-900">
+      <div className="pattern-primary absolute inset-0"></div>
+      <div className="absolute inset-0 bg-gradient-to-br from-primary-800"></div>
 
       <div className="pointer-events-none absolute inset-0 overflow-hidden"></div>
 
-      <div className="container relative z-10 max-w-screen-2xl pt-12 md:pb-56 md:pt-16 lg:py-20 xl:py-28 2xl:pt-32">
-        <div className="grid items-center gap-8 lg:grid-cols-2 lg:gap-16">
-          <div className="">
+      <div className="relative"></div>
+      <div className="container relative z-1 max-w-screen-2xl py-12 md:py-16 lg:py-20">
+        <div className="grid items-start gap-8 lg:grid-cols-2">
+          <div className="max-w-xl lg:mt-8">
             {title && (
-              <h1 className="text-lg font-semibold uppercase tracking-wide text-primary-600 md:text-xl xl:text-2xl">
+              <h1 className="font-heading text-5xl font-semibold text-white md:text-6xl xl:text-7xl">
                 {title}
               </h1>
             )}
-            {subtitle && (
-              <h2 className="mt-3 font-heading text-4xl font-normal text-primary-950 md:max-w-[80vw] md:text-5xl xl:text-6xl">
-                {subtitle}
-              </h2>
+
+            {unformattedBody && (
+              <div className="prose prose-lg prose-primary-invert mt-6 md:prose-xl">
+                {documentToReactComponents(unformattedBody, options)}
+              </div>
             )}
 
             {buttons && (
               <div className="mt-8">
                 {buttons?.map((button) => (
                   <Button
-                    className="button button-lg md:button-xl inline-flex bg-primary-600 text-white hover:bg-primary-500 focus:ring-primary-500"
+                    className="button button bg-secondary-600 inline-flex border-white text-white hover:bg-white hover:text-primary-700 focus:ring-primary-700"
                     text={button.fields.text}
                     pageRef={button.fields.page}
-                    url={button.fields.url}
                     key={button.fields.text}
                   />
                 ))}
               </div>
             )}
           </div>
-        </div>
-      </div>
-
-      {media && /(image)/.test(media?.fields?.file?.contentType) && (
-        <div className="z-10 md:absolute md:inset-0">
-          <div className="relative flex h-full w-full justify-center xl:container md:block xl:max-w-screen-2xl">
-            <Image
-              alt=""
-              src={`https:${media?.fields?.file?.url}`}
-              height={media?.fields?.file?.details?.image?.height}
-              width={media?.fields?.file?.details?.image?.width}
-              className="relative bottom-0 z-10 w-full md:absolute md:-right-[5vw] md:max-h-[648px] md:w-[60vw] md:-translate-y-8 lg:-translate-y-11 xl:h-[70%] xl:w-auto"
-            />
+          <div>
+            <figure className="aspect-[16/9] overflow-clip rounded-sm">
+              <Media media={media} />
+            </figure>
           </div>
         </div>
-      )}
-
-      <div className="absolute inset-0">
+      </div>
+      <div className="relative isolate">
         <svg
-          className="absolute bottom-0 right-0 h-[70%] w-[70%] fill-current text-primary-500"
-          viewBox="0 0 1000 1000"
-          preserveAspectRatio="none"
+          className="absolute bottom-0 left-0 right-0 fill-current text-primary-500"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 1000 300"
           fillOpacity="0.15"
         >
-          <path d="M 0 1000 Q 250 250 1000 0 L 1000 1000 Z" />
+          <path d="M 0 300 L 1000 0 L 1000 300 Z" />
+          <path d="M 0 500 L 1000 0 L 1000 300 Z" />
         </svg>
         <svg
-          className="absolute bottom-0 right-0 h-3/5 w-3/5 fill-current text-primary-500"
-          viewBox="0 0 1000 1000"
-          preserveAspectRatio="none"
-          fillOpacity="0.25"
+          className="relative z-1 w-full fill-current text-white"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 1000 50"
         >
-          <path d="M 0 1000 Q 250 250 1000 0 L 1000 1000 Z" />
-        </svg>
-        <svg
-          className="absolute bottom-0 right-0 h-1/2 w-1/2 fill-current text-primary-500"
-          viewBox="0 0 1000 1000"
-          preserveAspectRatio="none"
-          fillOpacity="0.4"
-        >
-          <path d="M 0 1000 Q 250 250 1000 0 L 1000 1000 Z" />
-        </svg>
-      </div>
-
-      <div className="absolute bottom-0 z-10 w-full md:relative">
-        <svg
-          className="w-full fill-current text-white"
-          viewBox="0 0 1000 100"
-          preserveAspectRatio="none"
-        >
-          <path d="M 0 0 Q 500 100 1000 0 L 1000 100 L 0 100" />
-        </svg>
-        <svg
-          className="strokeCurrent absolute bottom-0 left-0 right-0 text-primary-200"
-          viewBox="0 -10 1000 100"
-          preserveAspectRatio="none"
-        >
-          <path
-            d="M 0 0 Q 500 100 1000 0"
-            fill="none"
-            strokeWidth="2"
-            vectorEffect="non-scaling-stroke"
-          />
+          <path d="M 0 0 Q 500 50 1000 0 L 1000 50 L 0 50" />
         </svg>
       </div>
     </section>
