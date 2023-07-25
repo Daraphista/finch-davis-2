@@ -1,10 +1,4 @@
+export { default as Overview } from "./Overview";
+export { default as PracticeAreas } from "./PracticeAreas";
 export { default as HomeHero } from "./HomeHero";
-export { default as DentalServices } from "./DentalServices";
-export { default as WhyChooseUs } from "./WhyChooseUs";
-export { default as Testimonials } from "./Testimonials";
-export { default as Instagram } from "./Instagram";
-export { default as WhatWeDo } from "./WhatWeDo";
-export { default as MeetOurDoctors } from "./MeetOurDoctors";
-export { default as MeetOurStaff } from "./MeetOurStaff";
-export { default as StagesOfPeriodontalDisease } from "./StagesOfPeriodontalDisease";
-export { default as AfterToothProcedure } from "./AfterToothProcedure";
+export { default as BlogCards } from "./BlogCards";
