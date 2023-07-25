@@ -9,35 +9,36 @@ module.exports = {
     "./components/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    // font families are defined here in the config
-    // fonts need to be imported in the CSS tab
-    fontFamily: {
-      // default/main body font
-      sans: ["Plus Jakarta Sans", "sans-serif"],
-      // heading font for hero titles, section titles, and RTE (Rich Text Editor) elements
-      heading: ["Hepta Slab", "sans-serif"],
-    },
     extend: {
+      // font families are defined here in the config
+      // fonts need to be imported in the CSS tab
+      fontFamily: {
+        // default/main body font
+        sans: ["Geologica", "sans-serif"],
+        // heading font for hero titles, section titles, and RTE (Rich Text Editor) elements
+        heading: ["var(--font-maitree)"],
+      },
       colors: {
         transparent: "transparent",
         current: "currentColor",
         white: colors.white,
         black: colors.black,
-        gray: colors.slate,
-        primary: colors.cyan,
-        // secondary: {
-        //   DEFAULT: '#151427',
-        //   50: '#F4F3F9',
-        //   100: '#E4E3F0',
-        //   200: '#C4C1DF',
-        //   300: '#A39FCE',
-        //   400: '#827DBD',
-        //   500: '#625CAB',
-        //   600: '#4C488C',
-        //   700: '#3A376A',
-        //   800: '#272549',
-        //   900: '#151427',
-        // },
+        gray: colors.neutral,
+        primary: {
+          DEFAULT: "#7a121c",
+          50: "#fff0f1",
+          100: "#ffe0e3",
+          200: "#ffc2c8",
+          300: "#ff949f",
+          400: "#fe5868",
+          500: "#f9243a",
+          600: "#db1428",
+          700: "#b30f1f",
+          800: "#8f0f1c",
+          // brand
+          900: "#7a121c",
+          950: "#51060e",
+        },
       },
       container: {
         center: true,
@@ -70,6 +71,7 @@ module.exports = {
         95: ".95",
         100: "1",
       },
+
       maxWidth: {
         prose: "75ch",
       },
@@ -87,6 +89,7 @@ module.exports = {
           css: {
             "max-width": "75ch",
             "--tw-prose-links": theme("colors.primary[700]"),
+            "font-weight": "300",
             a: {
               "font-weight": "600",
             },
@@ -94,19 +97,19 @@ module.exports = {
               color: theme("colors.primary[600]"),
             },
             h1: {
-              "font-family": theme("fonts.heading"),
+              "font-family": '"Maitree", serif',
               "font-weight": "700",
             },
             h2: {
-              "font-family": theme("fonts.heading"),
+              "font-family": '"Maitree", serif',
               "font-weight": "600",
             },
             h3: {
-              "font-family": theme("fonts.heading"),
+              "font-family": '"Maitree", serif',
               "font-weight": "600",
             },
             h4: {
-              "font-family": theme("fonts.heading"),
+              "font-family": '"Maitree", serif',
               "font-weight": "600",
             },
           },
@@ -137,22 +140,22 @@ module.exports = {
             "a:hover": {
               color: theme("colors.primary[300]"),
             },
-            "--tw-prose-body": theme("colors.primary[100]"),
+            "--tw-prose-body": theme("colors.primary[50]"),
             "--tw-prose-headings": theme("colors.white"),
-            "--tw-prose-lead": theme("colors.primary[300]"),
+            "--tw-prose-lead": theme("colors.white"),
             "--tw-prose-links": theme("colors.white"),
             "--tw-prose-bold": theme("colors.white"),
-            "--tw-prose-counters": theme("colors.primary[400]"),
-            "--tw-prose-bullets": theme("colors.primary[500]"),
-            "--tw-prose-hr": theme("colors.primary[600]"),
+            "--tw-prose-counters": theme("colors.primary[300]"),
+            "--tw-prose-bullets": theme("colors.primary[300]"),
+            "--tw-prose-hr": theme("colors.primary[700]"),
             "--tw-prose-quotes": theme("colors.primary[100]"),
             "--tw-prose-quote-borders": theme("colors.primary[600]"),
-            "--tw-prose-captions": theme("colors.primary[400]"),
+            "--tw-prose-captions": theme("colors.primary[300]"),
             "--tw-prose-code": theme("colors.white"),
             "--tw-prose-pre-code": theme("colors.primary[300]"),
             "--tw-prose-pre-bg": "rgb(0 0 0 / 50%)",
             "--tw-prose-th-borders": theme("colors.primary[500]"),
-            "--tw-prose-td-borders": theme("colors.primary[600]"),
+            "--tw-prose-td-borders": theme("colors.primary[700]"),
           },
         },
         secondary: {
@@ -181,28 +184,25 @@ module.exports = {
             "a:hover": {
               color: theme("colors.secondary[300]"),
             },
-            "--tw-prose-body": theme("colors.secondary[100]"),
+            "--tw-prose-body": theme("colors.white"),
             "--tw-prose-headings": theme("colors.white"),
-            "--tw-prose-lead": theme("colors.secondary[300]"),
+            "--tw-prose-lead": theme("colors.white"),
             "--tw-prose-links": theme("colors.white"),
             "--tw-prose-bold": theme("colors.white"),
-            "--tw-prose-counters": theme("colors.secondary[400]"),
-            "--tw-prose-bullets": theme("colors.secondary[600]"),
-            "--tw-prose-hr": theme("colors.secondary[700]"),
-            "--tw-prose-quotes": theme("colors.secondary[100]"),
-            "--tw-prose-quote-borders": theme("colors.secondary[700]"),
-            "--tw-prose-captions": theme("colors.secondary[400]"),
+            "--tw-prose-counters": theme("colors.secondary[200]"),
+            "--tw-prose-bullets": theme("colors.secondary[300]"),
+            "--tw-prose-hr": theme("colors.secondary[500]"),
+            "--tw-prose-quotes": theme("colors.secondary[50]"),
+            "--tw-prose-quote-borders": theme("colors.secondary[400]"),
+            "--tw-prose-captions": theme("colors.secondary[300]"),
             "--tw-prose-code": theme("colors.white"),
             "--tw-prose-pre-code": theme("colors.secondary[300]"),
             "--tw-prose-pre-bg": "rgb(0 0 0 / 50%)",
-            "--tw-prose-th-borders": theme("colors.secondary[600]"),
-            "--tw-prose-td-borders": theme("colors.secondary[700]"),
+            "--tw-prose-th-borders": theme("colors.secondary[300]"),
+            "--tw-prose-td-borders": theme("colors.secondary[500]"),
           },
         },
       }),
-    },
-    cursor: {
-      pointer: "url('../public/custom-pointer.svg'), pointer",
     },
   },
   plugins: [
