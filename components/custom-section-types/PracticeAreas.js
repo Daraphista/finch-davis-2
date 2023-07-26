@@ -1,7 +1,7 @@
 import Link from "next/link";
 import uniqid from "uniqid";
 
-export default function Default({
+export default function PracticeAreas({
   id,
   title,
   subtitle,
@@ -38,7 +38,7 @@ export default function Default({
                   <div className="absolute inset-0 bg-primary-800/90 mix-blend-multiply"></div>
                   <div className="absolute inset-0 bg-gradient-to-tr from-primary-950 opacity-50 transition group-hover:opacity-0"></div>
                   <div className="absolute inset-0 flex items-end p-4">
-                    <p className="font-heading text-start text-2xl text-white">
+                    <p className="text-start font-heading text-2xl text-white">
                       {practiceArea?.fields?.title}
                     </p>
                   </div>
