@@ -23,7 +23,12 @@ export default function BlogCards({ customContentCollection }) {
     <section>
       <div className="container max-w-screen-xl py-12 md:py-16 lg:py-20">
         <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-4 lg:mx-0 lg:max-w-none lg:grid-cols-3">
-
+          {customContentCollection?.map((blog) => (
+            <article
+              className="flex flex-col items-start justify-between transition-transform group-hover:scale-105"
+              key={blog?.sys?.id}
+            ></article>
+          ))}
         </div>
       </div>
     </section>
