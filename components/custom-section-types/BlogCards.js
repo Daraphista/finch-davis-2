@@ -27,7 +27,12 @@ export default function BlogCards({ customContentCollection }) {
             <article
               className="flex flex-col items-start justify-between transition-transform group-hover:scale-105"
               key={blog?.sys?.id}
-            ></article>
+            >
+              <Link
+                className="group w-full overflow-clip rounded-sm shadow-lg transition-shadow hover:shadow-2xl"
+                href={`/news/${blog?.fields?.slug}`}
+              ></Link>
+            </article>
           ))}
         </div>
       </div>
