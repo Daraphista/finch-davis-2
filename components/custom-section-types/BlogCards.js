@@ -80,18 +80,7 @@ export default function BlogCards({ customContentCollection }) {
                       );
                     })}
 
-                    <div className="mt-2 text-sm italic text-gray-500">
-                      {blog?.fields?.date && (
-                        <time
-                          time={formatMachineReadableDateTime(
-                            blog?.fields?.date,
-                            "day"
-                          )}
-                        >
-                          {formatDateAndTime(blog?.fields?.date, "day")}
-                        </time>
-                      )}
-                    </div>
+                    <div className="mt-2 text-sm italic text-gray-500"></div>
                   </div>
                 </div>
               </Link>
