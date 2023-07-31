@@ -91,19 +91,6 @@ export default function BlogCards({ customContentCollection }) {
                           {formatDateAndTime(blog?.fields?.date, "day")}
                         </time>
                       )}
-                      {blog?.fields?.authors && (
-                        <>
-                          {" "}
-                          <span>by </span>
-                          {blog?.fields?.authors?.map((author, index) => {
-                            return formatAuthorName(
-                              author,
-                              blog?.fields?.authors,
-                              index
-                            );
-                          })}
-                        </>
-                      )}
                     </div>
                   </div>
                 </div>
