@@ -31,7 +31,30 @@ export default function BlogCards({ customContentCollection }) {
               <Link
                 className="group w-full overflow-clip rounded-sm shadow-lg transition-shadow hover:shadow-2xl"
                 href={`/news/${blog?.fields?.slug}`}
-              ></Link>
+              >
+                <div className="relative flex w-full">
+                  {blog?.fields?.image ? (
+                    <Image
+                      src={`https:${blog?.fields?.image?.fields?.file?.url}`}
+                      width={
+                        blog?.fields?.image?.fields?.file?.details?.image?.width
+                      }
+                      height={
+                        blog?.fields?.image?.fields?.file?.details?.image
+                          ?.height
+                      }
+                      alt=""
+                      className="w-full bg-gray-100 object-cover sm:aspect-[2/1] lg:aspect-[3/2]"
+                    />
+                  ) : (
+                    <Image
+                      src={ogImage}
+                      alt=""
+                      className="w-full bg-gray-100 object-cover sm:aspect-[2/1] lg:aspect-[3/2]"
+                    />
+                  )}
+                </div>
+              </Link>
             </article>
           ))}
         </div>
