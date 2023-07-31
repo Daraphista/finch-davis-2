@@ -80,7 +80,21 @@ export default function BlogCards({ customContentCollection }) {
                       );
                     })}
 
-                    <div className="mt-2 text-sm italic text-gray-500"></div>
+                    <div className="mt-2 text-sm italic text-gray-500">
+                      {blog?.fields?.authors && (
+                        <>
+                          {" "}
+                          <span>by </span>
+                          {blog?.fields?.authors?.map((author, index) => {
+                            return formatAuthorName(
+                              author,
+                              blog?.fields?.authors,
+                              index
+                            );
+                          })}
+                        </>
+                      )}
+                    </div>
                   </div>
                 </div>
               </Link>
