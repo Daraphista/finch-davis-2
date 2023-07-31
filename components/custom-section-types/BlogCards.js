@@ -54,6 +54,14 @@ export default function BlogCards({ customContentCollection }) {
                     />
                   )}
                 </div>
+
+                <div className="max-w-xl p-6">
+                  <div className="group relative">
+                    <h3 className="mt-3 line-clamp-2 font-heading text-lg font-semibold leading-6 text-primary-900">
+                      {blog?.fields?.title}
+                    </h3>
+                  </div>
+                </div>
               </Link>
             </article>
           ))}
