@@ -60,6 +60,25 @@ export default function BlogCards({ customContentCollection }) {
                     <h3 className="mt-3 line-clamp-2 font-heading text-lg font-semibold leading-6 text-primary-900">
                       {blog?.fields?.title}
                     </h3>
+
+                    {blog?.fields?.authors?.map((author, index) => {
+                      if (index === blog?.fields?.authors.length) {
+                        return (
+                          author && (
+                            <span className="sr-only" key={uniqid()}>
+                              {author},{" "}
+                            </span>
+                          )
+                        );
+                      }
+                      return (
+                        author && (
+                          <span className="sr-only" key={uniqid()}>
+                            {author}
+                          </span>
+                        )
+                      );
+                    })}
                   </div>
                 </div>
               </Link>
